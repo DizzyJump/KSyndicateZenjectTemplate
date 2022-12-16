@@ -16,7 +16,7 @@ namespace CodeBase.Infrastructure.States
         public void Enter()
         {
             Debug.Log("BootstrapState Enter");
-            gameStateMachine.Enter<LoadGameSaveState>();
+            gameStateMachine.Enter<LoadPlayerProgressState>();
         }
 
         public void Exit()

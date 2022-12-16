@@ -10,7 +10,7 @@ namespace CodeBase.Infrastructure.States
 
         public GameStateMachine(
             BootstrapState.Factory bootstrapStateFactory,
-            LoadGameSaveState.Factory loadGameSaveStateFactory,
+            LoadPlayerProgressState.Factory loadGameSaveStateFactory,
             LoadLevelState.Factory loadLevelStateFactory)
         {
             registeredStates = new Dictionary<Type, IExitableState>();

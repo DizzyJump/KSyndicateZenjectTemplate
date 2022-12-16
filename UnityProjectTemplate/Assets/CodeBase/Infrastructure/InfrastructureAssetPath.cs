@@ -4,6 +4,7 @@
     {
         public const string CoroutineRunnerPath = "Infrastructure/CoroutineRunner";
         public const string CurtainPath = "Infrastructure/CurtainCanvas";
-        public const string GameHubScene = "GameHub";
+        public const string StartGameScene = "GameHub";
+        public const string HUDRoot = "Infrastructure/HUD Root";
     }
 }
