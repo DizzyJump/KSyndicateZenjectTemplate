@@ -1,0 +1,3 @@
+# UnityProjectTemplate
+
+Dependencies: Extenject (Zenject)
