@@ -61,6 +61,7 @@
      <Compile Include="Assets\CodeBase\CompositionRoot\GameInstaller.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameRunner.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\GameFactory.cs" />
+     <Compile Include="Assets\CodeBase\Services\Ads\AdsService.cs" />
      <Compile Include="Assets\CodeBase\UI\Factories\IUIFactory.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\IGameFactory.cs" />
      <Compile Include="Assets\CodeBase\UI\Factories\UIFactory.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IProgressSaver.cs" />
      <Compile Include="Assets\CodeBase\Data\DataExtensions.cs" />
      <Compile Include="Assets\CodeBase\Services\SaveLoadService\ISaveLoadService.cs" />
+     <Compile Include="Assets\CodeBase\Services\Ads\IAdsService.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

@@ -1,6 +1,7 @@
 using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.Factories;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.Ads;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.Randomizer;
 using CodeBase.Services.SaveLoadService;
@@ -28,6 +29,13 @@ public class GameInstaller : MonoInstaller
         BindPlayerProgressService();
 
         BindSaveLoadService();
+
+        BindAdsService();
+    }
+
+    private void BindAdsService()
+    {
+        Container.BindInterfacesAndSelfTo<AdsService>().AsSingle();
     }
 
     private void BindSaveLoadService()
