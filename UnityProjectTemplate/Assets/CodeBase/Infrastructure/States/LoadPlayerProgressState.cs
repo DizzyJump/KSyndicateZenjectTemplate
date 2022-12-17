@@ -10,10 +10,10 @@ namespace CodeBase.Infrastructure.States
 {
     public class LoadPlayerProgressState : IState
     {
-        private IGameStateMachine gameStateMachine;
-        private ISaveLoadService saveLoadService;
-        private IEnumerable<IProgressReader> progressReaderServices;
-        private IPlayerProgressService progressService;
+        private readonly IGameStateMachine gameStateMachine;
+        private readonly ISaveLoadService saveLoadService;
+        private readonly IEnumerable<IProgressReader> progressReaderServices;
+        private readonly IPlayerProgressService progressService;
 
         public LoadPlayerProgressState(IGameStateMachine gameStateMachine, IPlayerProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices)
         {

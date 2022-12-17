@@ -6,6 +6,7 @@ using CodeBase.Services.InputService;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.RandomizerService;
 using CodeBase.Services.SaveLoadService;
+using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Factories;
 using UnityEngine;
 using Zenject;
@@ -26,6 +27,8 @@ namespace CodeBase.CompositionRoot
 
             BindGameStateMachine();
 
+            BindStaticDataService();
+
             BindGameFactory();
         
             BindUIFactory();
@@ -40,6 +43,9 @@ namespace CodeBase.CompositionRoot
 
             BindInputService();
         }
+
+        private void BindStaticDataService() => 
+            Container.BindInterfacesAndSelfTo<StaticDataService>().AsSingle();
 
         private void BindGameBootstraperFactory()
         {

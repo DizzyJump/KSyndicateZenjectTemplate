@@ -4,7 +4,7 @@ namespace CodeBase.Infrastructure.Factories
 {
     public class GameFactory : IGameFactory
     {
-        private HUDRoot.Factory hudFactory;
+        private readonly HUDRoot.Factory hudFactory;
 
         public GameFactory(HUDRoot.Factory hudFactory)
         {

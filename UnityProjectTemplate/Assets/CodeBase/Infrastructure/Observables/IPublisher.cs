@@ -2,7 +2,7 @@
 {
     public interface IPublisher<TSubject>
     {
-        TSubject Value { get; set; }
+        TSubject Subject { get; set; }
         event System.Action<TSubject> OnChange;
     }
 }

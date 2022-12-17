@@ -9,7 +9,7 @@ namespace CodeBase.Infrastructure.Observables
 
         public event System.Action<TSubject> OnChange;
         
-        public TSubject Value
+        public TSubject Subject
         {
             get => subject;
             set

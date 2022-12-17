@@ -9,8 +9,8 @@ namespace CodeBase.Services.SaveLoadService
     {
         private const string ProgressKey = "Progress";
         
-        private IEnumerable<IProgressSaver> saverServices;
-        private IPlayerProgressService playerProgressService;
+        private readonly IEnumerable<IProgressSaver> saverServices;
+        private readonly IPlayerProgressService playerProgressService;
 
         public SaveLoadService(IEnumerable<IProgressSaver> saverServices, IPlayerProgressService playerProgressService)
         {

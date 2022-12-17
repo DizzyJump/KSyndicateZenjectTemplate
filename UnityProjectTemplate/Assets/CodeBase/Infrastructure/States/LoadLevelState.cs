@@ -5,9 +5,9 @@ namespace CodeBase.Infrastructure.States
 {
     public class LoadLevelState : IPaylodedState<string>
     {
-        private IGameStateMachine gameStateMachine;
-        private ISceneLoader sceneLoader;
-        private ILoadingCurtain loadingCurtain;
+        private readonly IGameStateMachine gameStateMachine;
+        private readonly ISceneLoader sceneLoader;
+        private readonly ILoadingCurtain loadingCurtain;
 
         public LoadLevelState(IGameStateMachine gameStateMachine, ISceneLoader sceneLoader, ILoadingCurtain loadingCurtain)
         {

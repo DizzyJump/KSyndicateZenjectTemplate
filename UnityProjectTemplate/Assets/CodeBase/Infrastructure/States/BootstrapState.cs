@@ -1,4 +1,5 @@
 ﻿using CodeBase.Services.AdsService;
+using CodeBase.Services.StaticDataService;
 using UnityEngine;
 using Zenject;
 
@@ -6,22 +7,34 @@ namespace CodeBase.Infrastructure.States
 {
     public class BootstrapState : IState
     {
-        private IGameStateMachine gameStateMachine;
-        private IAdsService adsService;
+        private readonly IGameStateMachine gameStateMachine;
+        private readonly IAdsService adsService;
+        private readonly IStaticDataService staticDataService;
 
         public BootstrapState(IGameStateMachine gameStateMachine,
-            IAdsService adsService)
+            IAdsService adsService,
+            IStaticDataService staticDataService)
         {
             Debug.Log("BootstrapState constructor");
             this.adsService = adsService;
+            this.staticDataService = staticDataService;
             this.gameStateMachine = gameStateMachine;
+            this.staticDataService = staticDataService;
         }
 
         public void Enter()
         {
             Debug.Log("BootstrapState Enter");
-            adsService.Initialize();
+            
+            InitServices();
+
             gameStateMachine.Enter<LoadPlayerProgressState>();
+        }
+
+        private void InitServices()
+        {
+            staticDataService.Initialize();
+            adsService.Initialize();
         }
 
         public void Exit()

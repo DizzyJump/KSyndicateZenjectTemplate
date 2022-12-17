@@ -61,6 +61,8 @@
      <Compile Include="Assets\CodeBase\CompositionRoot\GameInstaller.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameRunner.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\GameFactory.cs" />
+     <Compile Include="Assets\CodeBase\Services\StaticDataService\IStaticDataService.cs" />
+     <Compile Include="Assets\CodeBase\Services\StaticDataService\StaticDataService.cs" />
      <Compile Include="Assets\CodeBase\UI\Factories\IUIFactory.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\IGameFactory.cs" />
      <Compile Include="Assets\CodeBase\UI\Factories\UIFactory.cs" />

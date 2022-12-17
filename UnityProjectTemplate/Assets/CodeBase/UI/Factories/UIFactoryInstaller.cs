@@ -6,6 +6,8 @@ namespace CodeBase.UI.Factories
     {
         public override void InstallBindings()
         {
+            // bind ui sub-factories here
+            
             Container.Bind<IUIFactory>().To<UIFactory>().AsSingle();
         }
     }

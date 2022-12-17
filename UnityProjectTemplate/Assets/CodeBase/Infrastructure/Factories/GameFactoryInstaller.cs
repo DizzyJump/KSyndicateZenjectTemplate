@@ -7,6 +7,7 @@ namespace CodeBase.Infrastructure.Factories
     {
         public override void InstallBindings()
         {
+            // bind sub-factories here
             Container.BindFactory<HUDRoot, HUDRoot.Factory>().FromComponentInNewPrefabResource(InfrastructureAssetPath.HUDRoot);
         
             Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
