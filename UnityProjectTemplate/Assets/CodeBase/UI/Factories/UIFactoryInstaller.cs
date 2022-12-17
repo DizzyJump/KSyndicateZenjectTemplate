@@ -1,13 +1,12 @@
-using CodeBase.Infrastructure;
-using CodeBase.Infrastructure.Factories;
-using CodeBase.UI.HUD;
-using UnityEngine;
 using Zenject;
 
-public class UIFactoryInstaller : Installer<UIFactoryInstaller>
+namespace CodeBase.UI.Factories
 {
-    public override void InstallBindings()
+    public class UIFactoryInstaller : Installer<UIFactoryInstaller>
     {
-        Container.Bind<IUIFactory>().To<UIFactory>().AsSingle();
+        public override void InstallBindings()
+        {
+            Container.Bind<IUIFactory>().To<UIFactory>().AsSingle();
+        }
     }
 }

@@ -1,17 +1,19 @@
-using CodeBase.Infrastructure.States;
 using UnityEngine;
 using Zenject;
 
-public class GameStateMachineInstaller : Installer<GameStateMachineInstaller>
+namespace CodeBase.Infrastructure.States
 {
-    public override void InstallBindings()
+    public class GameStateMachineInstaller : Installer<GameStateMachineInstaller>
     {
-        Container.BindFactory<IGameStateMachine, BootstrapState, BootstrapState.Factory>();
-        Container.BindFactory<IGameStateMachine, LoadPlayerProgressState, LoadPlayerProgressState.Factory>();
-        Container.BindFactory<IGameStateMachine, LoadLevelState, LoadLevelState.Factory>();
+        public override void InstallBindings()
+        {
+            Container.BindFactory<IGameStateMachine, BootstrapState, BootstrapState.Factory>();
+            Container.BindFactory<IGameStateMachine, LoadPlayerProgressState, LoadPlayerProgressState.Factory>();
+            Container.BindFactory<IGameStateMachine, LoadLevelState, LoadLevelState.Factory>();
 
-        Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
+            Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
         
-        Debug.Log("GameStateMachineInstaller");
+            Debug.Log("GameStateMachineInstaller");
+        }
     }
 }

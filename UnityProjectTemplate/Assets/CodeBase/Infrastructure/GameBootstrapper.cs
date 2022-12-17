@@ -20,5 +20,9 @@ namespace CodeBase.Infrastructure
 
             DontDestroyOnLoad(this);
         }
+
+        public class Factory : PlaceholderFactory<GameBootstrapper>
+        {
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using CodeBase.Services.Ads;
+﻿using CodeBase.Services.AdsService;
 using UnityEngine;
 using Zenject;
 

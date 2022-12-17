@@ -1,15 +1,15 @@
-using CodeBase.Infrastructure;
-using CodeBase.Infrastructure.Factories;
 using CodeBase.UI.HUD;
-using UnityEngine;
 using Zenject;
 
-public class GameFactoryInstaller : Installer<GameFactoryInstaller>
+namespace CodeBase.Infrastructure.Factories
 {
-    public override void InstallBindings()
+    public class GameFactoryInstaller : Installer<GameFactoryInstaller>
     {
-        Container.BindFactory<HUDRoot, HUDRoot.Factory>().FromComponentInNewPrefabResource(InfrastructureAssetPath.HUDRoot);
+        public override void InstallBindings()
+        {
+            Container.BindFactory<HUDRoot, HUDRoot.Factory>().FromComponentInNewPrefabResource(InfrastructureAssetPath.HUDRoot);
         
-        Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
+            Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
+        }
     }
 }

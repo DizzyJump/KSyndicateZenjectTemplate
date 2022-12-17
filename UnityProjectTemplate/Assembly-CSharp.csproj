@@ -61,7 +61,6 @@
      <Compile Include="Assets\CodeBase\CompositionRoot\GameInstaller.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameRunner.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\GameFactory.cs" />
-     <Compile Include="Assets\CodeBase\Services\Ads\AdsService.cs" />
      <Compile Include="Assets\CodeBase\UI\Factories\IUIFactory.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\IGameFactory.cs" />
      <Compile Include="Assets\CodeBase\UI\Factories\UIFactory.cs" />
@@ -71,8 +70,8 @@
      <Compile Include="Assets\CodeBase\UI\HUD\IHUDRoot.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Observables\IPublisher.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Observables\Publisher.cs" />
-     <Compile Include="Assets\CodeBase\Services\Randomizer\IRandomizerService.cs" />
-     <Compile Include="Assets\CodeBase\Services\Randomizer\RandomizerService.cs" />
+     <Compile Include="Assets\CodeBase\Services\RandomizerService\IRandomizerService.cs" />
+     <Compile Include="Assets\CodeBase\Services\RandomizerService\RandomizerService.cs" />
      <Compile Include="Assets\CodeBase\Data\PlayerProgress.cs" />
      <Compile Include="Assets\CodeBase\Services\SaveLoadService\SaveLoadService.cs" />
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\PlayerProgressService.cs" />
@@ -81,7 +80,10 @@
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IProgressSaver.cs" />
      <Compile Include="Assets\CodeBase\Data\DataExtensions.cs" />
      <Compile Include="Assets\CodeBase\Services\SaveLoadService\ISaveLoadService.cs" />
-     <Compile Include="Assets\CodeBase\Services\Ads\IAdsService.cs" />
+     <Compile Include="Assets\CodeBase\Services\AdsService\IAdsService.cs" />
+     <Compile Include="Assets\CodeBase\Services\InputService\IInputService.cs" />
+     <Compile Include="Assets\CodeBase\Services\InputService\InputService.cs" />
+     <Compile Include="Assets\CodeBase\Services\AdsService\AdsService.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

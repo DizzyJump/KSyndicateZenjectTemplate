@@ -1,6 +1,4 @@
-﻿using CodeBase.UI.HUD;
-
-namespace CodeBase.Infrastructure.Factories
+﻿namespace CodeBase.UI.Factories
 {
     public class UIFactory : IUIFactory
     {

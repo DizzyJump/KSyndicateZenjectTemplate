@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.Services.Randomizer
+namespace CodeBase.Services.RandomizerService
 {
     public class RandomizerService : IRandomizerService
     {
