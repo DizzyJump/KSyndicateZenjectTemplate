@@ -1,4 +1,4 @@
-# UnityProjectTemplate
+# KSyndicateZenjectTemplate
 
 Main idea of template is K-Syndicate-like architecture + Zenject
 
