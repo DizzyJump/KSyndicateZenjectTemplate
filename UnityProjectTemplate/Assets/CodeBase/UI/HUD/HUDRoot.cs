@@ -10,6 +10,7 @@ namespace CodeBase.UI.HUD
 
         public class Factory : PlaceholderFactory<HUDRoot>
         {
+            
         }
     }
 }

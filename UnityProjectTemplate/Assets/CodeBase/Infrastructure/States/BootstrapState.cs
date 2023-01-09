@@ -1,4 +1,5 @@
-﻿using CodeBase.Services.AdsService;
+﻿using System.Threading.Tasks;
+using CodeBase.Services.AdsService;
 using CodeBase.Services.StaticDataService;
 using UnityEngine;
 using Zenject;
@@ -27,11 +28,10 @@ namespace CodeBase.Infrastructure.States
             Debug.Log("BootstrapState Enter");
             
             InitServices();
-
             gameStateMachine.Enter<LoadPlayerProgressState>();
         }
 
-        private void InitServices()
+        private async void InitServices()
         {
             staticDataService.Initialize();
             adsService.Initialize();
