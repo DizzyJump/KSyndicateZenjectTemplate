@@ -19,7 +19,10 @@ namespace CodeBase.Infrastructure.States
             RegisterState(loadGameSaveStateFactory.Create(this));
             RegisterState(loadLevelStateFactory.Create(this));
         }
-        
+
+        protected void RegisterState<TState>(TState state) where TState : IExitableState =>
+            registeredStates.Add(typeof(TState), state);
+
         public void Enter<TState>() where TState : class, IState
         {
             TState newState = ChangeState<TState>();
@@ -31,9 +34,6 @@ namespace CodeBase.Infrastructure.States
             TState newState = ChangeState<TState>();
             newState.Enter(payload);
         }
-
-        protected void RegisterState<TState>(TState state) where TState : IExitableState =>
-            registeredStates.Add(typeof(TState), state);
 
         private TState ChangeState<TState>() where TState : class, IExitableState
         {
