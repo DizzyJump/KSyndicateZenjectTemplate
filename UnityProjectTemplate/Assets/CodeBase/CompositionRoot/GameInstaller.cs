@@ -112,11 +112,7 @@ namespace CodeBase.CompositionRoot
 
         private void BindGameStateMachine()
         {
-            Container
-                .Bind<IGameStateMachine>()
-                .FromSubContainerResolve()
-                .ByInstaller<GameStateMachineInstaller>()
-                .AsSingle();
+            GameStateMachineInstaller.Install(Container);
             Debug.Log("Bind IGameStateMachine");
         }
     }

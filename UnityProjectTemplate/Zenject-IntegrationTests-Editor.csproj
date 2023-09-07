@@ -325,10 +325,10 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Zenject-usage">
-     <HintPath>D:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
-     <HintPath>D:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -709,16 +709,16 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.TestRunner">
-     <HintPath>D:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.TestRunner">
-     <HintPath>D:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>D:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>D:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

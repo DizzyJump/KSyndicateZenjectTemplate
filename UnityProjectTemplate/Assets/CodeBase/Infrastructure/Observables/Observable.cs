@@ -13,22 +13,22 @@ namespace CodeBase.Infrastructure.Observables
     /// <author>Jackson Dunstan, http://JacksonDunstan.com/articles/3547</author>
     /// <license>MIT</license>
     [Serializable]
-    public class Observable<T> : IEquatable<Observable<T>>
+    public class Observable<TValue> : IEquatable<Observable<TValue>>
     {
-        private T value;
+        private TValue value;
  
         public Observable()
         {
         }
  
-        public Observable(T value)
+        public Observable(TValue value)
         {
             this.value = value;
         }
  
-        public Action<Observable<T>, T, T> OnChanged;
+        public Action<Observable<TValue>, TValue, TValue> OnChanged;
  
-        public T Value
+        public TValue Value
         {
             get { return value; }
             set
@@ -42,12 +42,12 @@ namespace CodeBase.Infrastructure.Observables
             }
         }
  
-        public static implicit operator Observable<T>(T observable)
+        public static implicit operator Observable<TValue>(TValue observable)
         {
-            return new Observable<T>(observable);
+            return new Observable<TValue>(observable);
         }
  
-        public static explicit operator T(Observable<T> observable)
+        public static explicit operator TValue(Observable<TValue> observable)
         {
             return observable.value;
         }
@@ -57,7 +57,7 @@ namespace CodeBase.Infrastructure.Observables
             return value.ToString();
         }
  
-        public bool Equals(Observable<T> other)
+        public bool Equals(Observable<TValue> other)
         {
             return other.value.Equals(value);
         }
@@ -65,8 +65,8 @@ namespace CodeBase.Infrastructure.Observables
         public override bool Equals(object other)
         {
             return other != null
-                   && other is Observable<T>
-                   && ((Observable<T>)other).value.Equals(value);
+                   && other is Observable<TValue>
+                   && ((Observable<TValue>)other).value.Equals(value);
         }
  
         public override int GetHashCode()

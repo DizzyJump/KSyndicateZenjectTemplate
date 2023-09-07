@@ -1,26 +1,30 @@
 ﻿using System.Threading.Tasks;
 using CodeBase.Services.AdsService;
+using CodeBase.Services.AnalyticsService;
 using CodeBase.Services.StaticDataService;
 using UnityEngine;
 using Zenject;
 
 namespace CodeBase.Infrastructure.States
 {
-    public class BootstrapState : IState
+    public class GameBootstrapState : IState
     {
-        private readonly IGameStateMachine gameStateMachine;
+        private readonly GameStateMachine gameStateMachine;
         private readonly IAdsService adsService;
         private readonly IStaticDataService staticDataService;
+        private readonly IAnalyticsService analyticsService;
 
-        public BootstrapState(IGameStateMachine gameStateMachine,
+        public GameBootstrapState(GameStateMachine gameStateMachine,
             IAdsService adsService,
-            IStaticDataService staticDataService)
+            IStaticDataService staticDataService,
+            IAnalyticsService analyticsService)
         {
             Debug.Log("BootstrapState constructor");
             this.adsService = adsService;
             this.staticDataService = staticDataService;
             this.gameStateMachine = gameStateMachine;
             this.staticDataService = staticDataService;
+            this.analyticsService = analyticsService;
         }
 
         public void Enter()
@@ -28,11 +32,13 @@ namespace CodeBase.Infrastructure.States
             Debug.Log("BootstrapState Enter");
             
             InitServices();
-            gameStateMachine.Enter<LoadPlayerProgressState>();
+            gameStateMachine.Enter<LoadSceneState, string>(InfrastructureAssetPath.GameLoadingScene);
         }
 
         private async void InitServices()
         {
+            // init mandatory global services here
+            analyticsService.Initialize();
             staticDataService.Initialize();
             adsService.Initialize();
         }
@@ -40,10 +46,6 @@ namespace CodeBase.Infrastructure.States
         public void Exit()
         {
             Debug.Log("BootstrapState Exit");
-        }
-
-        public class Factory : PlaceholderFactory<IGameStateMachine, BootstrapState>
-        {
         }
     }
 }

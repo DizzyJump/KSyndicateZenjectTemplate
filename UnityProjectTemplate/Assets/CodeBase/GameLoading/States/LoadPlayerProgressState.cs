@@ -10,12 +10,12 @@ namespace CodeBase.Infrastructure.States
 {
     public class LoadPlayerProgressState : IState
     {
-        private readonly IGameStateMachine gameStateMachine;
+        private readonly GameStateMachine gameStateMachine;
         private readonly ISaveLoadService saveLoadService;
         private readonly IEnumerable<IProgressReader> progressReaderServices;
         private readonly IPlayerProgressService progressService;
 
-        public LoadPlayerProgressState(IGameStateMachine gameStateMachine, IPlayerProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices)
+        public LoadPlayerProgressState(GameStateMachine gameStateMachine, IPlayerProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices)
         {
             this.gameStateMachine = gameStateMachine;
             this.saveLoadService = saveLoadService;
@@ -31,7 +31,7 @@ namespace CodeBase.Infrastructure.States
             
             NotifyProgressReaderServices(progress);
             
-            gameStateMachine.Enter<LoadLevelState, string>(InfrastructureAssetPath.StartGameScene);
+            gameStateMachine.Enter<LoadSceneState, string>(InfrastructureAssetPath.GameHubScene);
         }
 
         private void NotifyProgressReaderServices(PlayerProgress progress)
@@ -60,10 +60,10 @@ namespace CodeBase.Infrastructure.States
 
             Debug.Log("Init new player progress");
             // init start state of progress here
+
+            progress.PrivatePolicyAccepted = false;
             
             return progress;
         }
-        
-        public class Factory : PlaceholderFactory<IGameStateMachine, LoadPlayerProgressState> { }
     }
 }

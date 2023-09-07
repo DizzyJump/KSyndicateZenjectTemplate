@@ -2,6 +2,6 @@
 {
     public class PlayerProgress
     {
-        
+        public bool PrivatePolicyAccepted;
     }
 }

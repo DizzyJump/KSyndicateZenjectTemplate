@@ -6,17 +6,23 @@ namespace CodeBase.Infrastructure
 {
     public class GameBootstrapper : MonoBehaviour
     {
-        private IGameStateMachine gameStateMachine;
+        private GameStateMachine gameStateMachine;
+        private StatesFactory statesFactory;
 
         [Inject]
-        void Construct(IGameStateMachine gameStateMachine)
+        void Construct(GameStateMachine gameStateMachine, StatesFactory statesFactory)
         {
             this.gameStateMachine = gameStateMachine;
+            this.statesFactory = statesFactory;
         }
         
         private void Start()
         {
-            gameStateMachine.Enter<BootstrapState>();
+            gameStateMachine.RegisterState(statesFactory.Create<GameBootstrapState>());
+            gameStateMachine.RegisterState(statesFactory.Create<GameLoadingState>());
+            gameStateMachine.RegisterState(statesFactory.Create<LoadSceneState>());
+            
+            gameStateMachine.Enter<GameBootstrapState>();
 
             DontDestroyOnLoad(this);
         }
