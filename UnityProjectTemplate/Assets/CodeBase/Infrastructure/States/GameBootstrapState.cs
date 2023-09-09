@@ -32,7 +32,8 @@ namespace CodeBase.Infrastructure.States
             Debug.Log("BootstrapState Enter");
             
             InitServices();
-            gameStateMachine.Enter<LoadSceneState, string>(InfrastructureAssetPath.GameLoadingScene);
+            
+            gameStateMachine.Enter<GameLoadingState>();
         }
 
         private async void InitServices()

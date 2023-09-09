@@ -5,6 +5,7 @@ using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Factories;
 using CodeBase.UI.Overlays;
 using CodeBase.UI.Services.PopUps;
+using UnityEngine;
 
 namespace CodeBase.Infrastructure.GameLoading.States
 {
@@ -13,10 +14,10 @@ namespace CodeBase.Infrastructure.GameLoading.States
         private IServerConnectionService serverConnectionService;
         private IStaticDataService staticDataService;
         private SceneStateMachine sceneStateMachine;
-        private AwaitingOverlay awaitingOverlay;
+        private IAwaitingOverlay awaitingOverlay;
         private IPopUpService popUpService;
 
-        public ServerConnectState(IServerConnectionService serverConnectionService, IStaticDataService staticDataService, SceneStateMachine sceneStateMachine, AwaitingOverlay awaitingOverlay, IPopUpService popUpService)
+        public ServerConnectState(IServerConnectionService serverConnectionService, IStaticDataService staticDataService, SceneStateMachine sceneStateMachine, IAwaitingOverlay awaitingOverlay, IPopUpService popUpService)
         {
             this.serverConnectionService = serverConnectionService;
             this.staticDataService = staticDataService;
@@ -27,9 +28,13 @@ namespace CodeBase.Infrastructure.GameLoading.States
 
         public async void Enter()
         {
+            Debug.Log("ServerConnectState enter");
             awaitingOverlay.Show("Connection to server...");
+            
             ConnectionResult result = await serverConnectionService.Connect(staticDataService.ServerConnectionConfig);
+            
             awaitingOverlay.Hide();
+            
             if(result == ConnectionResult.Success)
                 sceneStateMachine.Enter<LoadPlayerProgressState>();
             else

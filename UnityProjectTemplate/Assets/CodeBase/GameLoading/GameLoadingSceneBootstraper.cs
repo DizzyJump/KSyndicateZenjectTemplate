@@ -1,4 +1,5 @@
-﻿using CodeBase.Infrastructure.GameLoading.States;
+﻿using CodeBase.GameLoading.States;
+using CodeBase.Infrastructure.GameLoading.States;
 using CodeBase.Infrastructure.States;
 using UnityEngine;
 using Zenject;
@@ -30,6 +31,7 @@ namespace CodeBase.Infrastructure.GameLoading
             sceneStateMachine.RegisterState(statesFactory.Create<LoadPlayerProgressState>());
             sceneStateMachine.RegisterState(statesFactory.Create<PrivatePolicyState>());
             sceneStateMachine.RegisterState(statesFactory.Create<GDPRState>());
+            sceneStateMachine.RegisterState(statesFactory.Create<FinishGameLoadingState>());
 
             Debug.Log("Finish loading scene bootstraping");
             

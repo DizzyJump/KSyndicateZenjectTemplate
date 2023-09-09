@@ -1,4 +1,5 @@
 ﻿using System;
+using CodeBase.Services.LocalizationService;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -10,12 +11,18 @@ namespace CodeBase.UI.Overlays
         [SerializeField] private TextMeshProUGUI message;
         [SerializeField] private Canvas canvas;
 
+        private ILocalizationService localizationService;
+
+        [Inject]
+        public void Construct(ILocalizationService localizationService) => 
+            this.localizationService = localizationService;
+
         private void Awake() => 
             Hide();
 
         public void Show(string withMessage)
         {
-            message.text = withMessage;
+            message.text = localizationService.Translate(withMessage);
             canvas.enabled = true;
         }
 

@@ -41,7 +41,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\CodeBase\Infrastructure\States\LoadSceneState.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\StateMachine.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Window\WindowId.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameRunner.cs" />
@@ -118,6 +117,11 @@
      <Compile Include="Assets\CodeBase\UI\PopUps\ErrorPopup\ErrorPopup.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\ErrorPopup\ErrorPopupConfig.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\PopUps\IPopUpService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\ISceneLoader.cs" />
+     <Compile Include="Assets\CodeBase\Services\LocalizationService\LocalizationService.cs" />
+     <Compile Include="Assets\CodeBase\Services\LocalizationService\ILocalizationService.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\States\FinishGameLoadingState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameHubState.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

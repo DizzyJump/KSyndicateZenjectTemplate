@@ -1,4 +1,5 @@
-﻿using CodeBase.UI.PopUps;
+﻿using CodeBase.Services.LocalizationService;
+using CodeBase.UI.PopUps;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,6 +16,12 @@ namespace CodeBase.UI.Windows.PrivatePolicyAccept
         [SerializeField] private TextMeshProUGUI agreeText;
         [SerializeField] private TextMeshProUGUI buttonText;
 
+        private ILocalizationService localizationService;
+
+        [Inject]
+        public void Construct(ILocalizationService localizationService) =>
+            this.localizationService = localizationService;
+        
         protected override void Initialize(PolicyAcceptPopupConfig config)
         {
             base.Initialize(config);
@@ -24,15 +31,15 @@ namespace CodeBase.UI.Windows.PrivatePolicyAccept
 
         private void SetControlStates()
         {
-            toggle.isOn = Progress.PrivatePolicyAccepted;
-            UpdateCloseButton(toggle.isOn);
+            toggle.isOn = false;
+            UpdateCloseButton(false);
         }
 
         private void FillData(PolicyAcceptPopupConfig config)
         {
-            policyText.text = config.PolicyText;
-            agreeText.text = config.AgreeText;
-            buttonText.text = config.ButtonText;
+            policyText.text = localizationService.Translate(config.PolicyText);
+            agreeText.text = localizationService.Translate(config.AgreeText);
+            buttonText.text = localizationService.Translate(config.ButtonText);
         }
 
         protected override void SubscribeUpdates()
@@ -44,7 +51,6 @@ namespace CodeBase.UI.Windows.PrivatePolicyAccept
 
         void OnToggleChange(bool value)
         {
-            Progress.PrivatePolicyAccepted = value;
             Debug.Log($"Private policy acceptance set to: {value}");
             UpdateCloseButton(value);
         }

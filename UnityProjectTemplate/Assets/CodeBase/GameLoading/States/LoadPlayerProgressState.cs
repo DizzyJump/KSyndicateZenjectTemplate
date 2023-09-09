@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CodeBase.Data;
+using CodeBase.Infrastructure.GameLoading.States;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.SaveLoadService;
+using CodeBase.UI.Overlays;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
@@ -11,28 +14,35 @@ namespace CodeBase.Infrastructure.States
 {
     public class LoadPlayerProgressState : IState
     {
-        private readonly GameStateMachine gameStateMachine;
+        private readonly SceneStateMachine sceneStateMachine;
         private readonly ISaveLoadService saveLoadService;
         private readonly IEnumerable<IProgressReader> progressReaderServices;
         private readonly IPersistentProgressService progressService;
+        private IAwaitingOverlay awaitingOverlay;
 
-        public LoadPlayerProgressState(GameStateMachine gameStateMachine, IPersistentProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices)
+        public LoadPlayerProgressState(SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices, IAwaitingOverlay awaitingOverlay)
         {
-            this.gameStateMachine = gameStateMachine;
+            this.sceneStateMachine = sceneStateMachine;
             this.saveLoadService = saveLoadService;
             this.progressService = progressService;
             this.progressReaderServices = progressReaderServices;
+            this.awaitingOverlay = awaitingOverlay;
         }
 
-        public void Enter()
+        public async void Enter()
         {
             Debug.Log("LoadPlayerProgressState enter");
+            
+            awaitingOverlay.Show("Loading player progress...");
             
             var progress = LoadProgressOrInitNew();
             
             NotifyProgressReaderServices(progress);
+
+            await UniTask.WaitForSeconds(1f); // just for demonstrate concept with overlay. You can remove it. 
+            awaitingOverlay.Hide();
             
-            gameStateMachine.Enter<LoadSceneState, string>(InfrastructureAssetPath.GameHubScene);
+            sceneStateMachine.Enter<PrivatePolicyState>();
         }
 
         private void NotifyProgressReaderServices(PlayerProgress progress)

@@ -20,7 +20,7 @@ namespace CodeBase.Infrastructure
         {
             gameStateMachine.RegisterState(statesFactory.Create<GameBootstrapState>());
             gameStateMachine.RegisterState(statesFactory.Create<GameLoadingState>());
-            gameStateMachine.RegisterState(statesFactory.Create<LoadSceneState>());
+            gameStateMachine.RegisterState(statesFactory.Create<GameHubState>());
             
             gameStateMachine.Enter<GameBootstrapState>();
 

@@ -22,24 +22,29 @@ namespace CodeBase.Infrastructure.GameLoading.States
             this.progressService = progressService;
         }
 
-        public void Exit()
-        {
-            
-        }
-
         public async void Enter()
         {
+            Debug.Log("PrivatePolicyState enter");
+            
             if (!progressService.Progress.PrivatePolicyAccepted) 
                 await AskToAcceptPrivatePolicy();
+            
+            if (progressService.Progress.PrivatePolicyAccepted)
+                sceneStateMachine.Enter<GDPRState>();
+            else
+                Debug.Log("Player cant play our game due to somehow reject private policy :)");
         }
 
         private async Task AskToAcceptPrivatePolicy()
         {
             bool result = await popUpService.AskPolicyPopup(privatePolicyPopupConfig);
-            if (result)
-                sceneStateMachine.Enter<GDPRState>();
-            else
-                Debug.Log("Player cant play our game due to reject private policy :)");
+            
+            progressService.Progress.PrivatePolicyAccepted = result;
+        }
+
+        public void Exit()
+        {
+            
         }
     }
 }

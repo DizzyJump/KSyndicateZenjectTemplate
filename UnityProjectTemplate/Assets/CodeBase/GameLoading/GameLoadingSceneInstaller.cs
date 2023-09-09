@@ -1,5 +1,6 @@
 ﻿using CodeBase.Infrastructure.GameLoading.States;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.LocalizationService;
 using CodeBase.UI;
 using CodeBase.UI.Windows.PrivatePolicyAccept;
 using UnityEngine;
@@ -21,7 +22,7 @@ namespace CodeBase.Infrastructure.GameLoading
             Container.BindInterfacesAndSelfTo<GameLoadingSceneBootstraper>().AsSingle().NonLazy(); // non lazy due to it's not injected anywere but we still need to instanciate it
 
             Container.BindInterfacesAndSelfTo<StatesFactory>().AsSingle();
-            
+
             Container.Bind<SceneStateMachine>().AsSingle();
             
             UIInstaller.Install(Container);

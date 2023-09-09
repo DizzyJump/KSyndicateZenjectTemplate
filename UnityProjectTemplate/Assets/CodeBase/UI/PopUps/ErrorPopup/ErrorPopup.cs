@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using CodeBase.Services.LocalizationService;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -11,14 +12,19 @@ namespace CodeBase.UI.PopUps.ErrorPopup
         [SerializeField] private TextMeshProUGUI messageText;
         [SerializeField] private TextMeshProUGUI buttonText;
         [SerializeField] private Button button;
+
+        private ILocalizationService localizationService;
+
+        public void Construct(ILocalizationService localizationService) =>
+            this.localizationService = localizationService;
         
         protected override void Initialize(ErrorPopupConfig with)
         {
             base.Initialize(with);
             
-            headerText.text = with.HeaderText;
-            messageText.text = with.MessageText;
-            buttonText.text = with.ButtonText;
+            headerText.text = localizationService.Translate(with.HeaderText);
+            messageText.text = localizationService.Translate(with.MessageText);
+            buttonText.text = localizationService.Translate(with.ButtonText);
         }
 
         protected override void SubscribeUpdates()

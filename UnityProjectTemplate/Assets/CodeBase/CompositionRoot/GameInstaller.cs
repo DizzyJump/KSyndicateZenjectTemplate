@@ -4,6 +4,7 @@ using CodeBase.Infrastructure.States;
 using CodeBase.Services.AdsService;
 using CodeBase.Services.AnalyticsService;
 using CodeBase.Services.InputService;
+using CodeBase.Services.LocalizationService;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.RandomizerService;
 using CodeBase.Services.SaveLoadService;
@@ -48,6 +49,13 @@ namespace CodeBase.CompositionRoot
             BindAnalyticsService();
 
             BindServerConnectionService();
+
+            BindLocalizationService();
+        }
+
+        private void BindLocalizationService()
+        {
+            Container.BindInterfacesTo<LocalizationService>().AsSingle();
         }
 
         private void BindServerConnectionService() => 
