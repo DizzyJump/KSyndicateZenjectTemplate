@@ -1,10 +1,12 @@
-﻿namespace CodeBase.Infrastructure.States
+﻿using System.Threading.Tasks;
+
+namespace CodeBase.Infrastructure.States
 {
     public class GameLoadingState : IState
     {
-        private LoadingCurtain loadingCurtain;
+        private readonly ILoadingCurtain loadingCurtain;
 
-        public GameLoadingState(LoadingCurtain loadingCurtain) => 
+        public GameLoadingState(ILoadingCurtain loadingCurtain) => 
             this.loadingCurtain = loadingCurtain;
 
         public void Exit()

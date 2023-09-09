@@ -4,6 +4,8 @@
     {
         public const string CoroutineRunnerPath = "Infrastructure/CoroutineRunner";
         public const string CurtainPath = "Infrastructure/CurtainCanvas";
+        public const string AwaitingOverlay = "Infrastructure/AwaitingOverlay";
+        public const string ErrorPopup = "Infrastructure/ErrorPopup";
         public const string GameHubScene = "GameHub";
         public const string GameLoadingScene = "LoadingScene";
         public const string HUDRoot = "Infrastructure/HUD Root";

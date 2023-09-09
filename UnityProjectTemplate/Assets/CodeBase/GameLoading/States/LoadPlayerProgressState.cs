@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using CodeBase.Data;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.SaveLoadService;
@@ -13,9 +14,9 @@ namespace CodeBase.Infrastructure.States
         private readonly GameStateMachine gameStateMachine;
         private readonly ISaveLoadService saveLoadService;
         private readonly IEnumerable<IProgressReader> progressReaderServices;
-        private readonly IPlayerProgressService progressService;
+        private readonly IPersistentProgressService progressService;
 
-        public LoadPlayerProgressState(GameStateMachine gameStateMachine, IPlayerProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices)
+        public LoadPlayerProgressState(GameStateMachine gameStateMachine, IPersistentProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices)
         {
             this.gameStateMachine = gameStateMachine;
             this.saveLoadService = saveLoadService;

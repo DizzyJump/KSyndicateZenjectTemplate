@@ -19,7 +19,7 @@ namespace CodeBase.Services.WindowsService
                 case WindowId.None:
                     break;
                 case WindowId.PrivatePolicyAccept:
-                    
+                    uiFactory.CreatePrivatePolicyPopup();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(window), window, null);

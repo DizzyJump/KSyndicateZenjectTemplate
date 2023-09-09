@@ -9,11 +9,11 @@
     {
         [SerializeField] protected Button CloseButton;
     
-        protected IPlayerProgressService ProgressService;
+        protected IPersistentProgressService ProgressService;
         protected PlayerProgress Progress => ProgressService.Progress;
 
         [Inject]
-        public void Construct(IPlayerProgressService progressService) => 
+        public void Construct(IPersistentProgressService progressService) => 
             ProgressService = progressService;
 
         private void Awake() => 

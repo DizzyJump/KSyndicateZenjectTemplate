@@ -5,30 +5,30 @@ using UnityEngine;
 
 namespace CodeBase.Services.SaveLoadService
 {
+    // This service implement saving and loading of progress.
+    // There are for example it implemented by PlayerPrefs but you can implement you own variant of service.
     public class SaveLoadService : ISaveLoadService
     {
         private const string ProgressKey = "Progress";
         
         private readonly IEnumerable<IProgressSaver> saverServices;
-        private readonly IPlayerProgressService playerProgressService;
+        private readonly IPersistentProgressService persistentProgressService;
 
-        public SaveLoadService(IEnumerable<IProgressSaver> saverServices, IPlayerProgressService playerProgressService)
+        public SaveLoadService(IEnumerable<IProgressSaver> saverServices, IPersistentProgressService persistentProgressService)
         {
             this.saverServices = saverServices;
-            this.playerProgressService = playerProgressService;
+            this.persistentProgressService = persistentProgressService;
         }
 
         public void SaveProgress()
         {
             foreach (var saver in saverServices) 
-                saver.UpdateProgress(playerProgressService.Progress);
+                saver.UpdateProgress(persistentProgressService.Progress);
             
-            PlayerPrefs.SetString(ProgressKey, playerProgressService.Progress.ToJson());
+            PlayerPrefs.SetString(ProgressKey, persistentProgressService.Progress.ToJson());
         }
 
-        public PlayerProgress LoadProgress()
-        {
-            return PlayerPrefs.GetString(ProgressKey)?.ToDeserialized<PlayerProgress>();
-        }
+        public PlayerProgress LoadProgress() => 
+            PlayerPrefs.GetString(ProgressKey)?.ToDeserialized<PlayerProgress>();
     }
 }

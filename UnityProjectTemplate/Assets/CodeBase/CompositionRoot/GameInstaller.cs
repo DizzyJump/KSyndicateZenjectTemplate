@@ -2,12 +2,16 @@ using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.Factories;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.AdsService;
+using CodeBase.Services.AnalyticsService;
 using CodeBase.Services.InputService;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.RandomizerService;
 using CodeBase.Services.SaveLoadService;
+using CodeBase.Services.ServerConnectionService;
 using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Factories;
+using CodeBase.UI.Overlays;
+using CodeBase.UI.PopUps.ErrorPopup;
 using UnityEngine;
 using Zenject;
 
@@ -23,15 +27,13 @@ namespace CodeBase.CompositionRoot
 
             BindSceneLoader();
 
-            BindLoadingCurtain();
+            BindCurtains();
 
             BindGameStateMachine();
 
             BindStaticDataService();
 
             BindGameFactory();
-        
-            BindUIFactory();
 
             BindRandomizeService();
 
@@ -42,7 +44,17 @@ namespace CodeBase.CompositionRoot
             BindAdsService();
 
             BindInputService();
+
+            BindAnalyticsService();
+
+            BindServerConnectionService();
         }
+
+        private void BindServerConnectionService() => 
+            Container.BindInterfacesTo<ServerConnectionService>().AsSingle();
+
+        private void BindAnalyticsService() => 
+            Container.BindInterfacesTo<AnalyticsService>().AsSingle();
 
         private void BindStaticDataService() => 
             Container.BindInterfacesAndSelfTo<StaticDataService>().AsSingle();
@@ -70,7 +82,7 @@ namespace CodeBase.CompositionRoot
         private void BindPlayerProgressService()
         {
             Container
-                .BindInterfacesAndSelfTo<PlayerProgressService>()
+                .BindInterfacesAndSelfTo<PersistentProgressService>()
                 .AsSingle();
         }
 
@@ -107,8 +119,17 @@ namespace CodeBase.CompositionRoot
         private void BindSceneLoader() => 
             Container.BindInterfacesAndSelfTo<SceneLoader>().AsSingle();
 
-        private void BindLoadingCurtain() => 
-            Container.Bind<ILoadingCurtain>().To<LoadingCurtain>().FromComponentInNewPrefabResource(InfrastructureAssetPath.CurtainPath).AsSingle();
+        private void BindCurtains()
+        {
+            Container.Bind<ILoadingCurtain>().To<LoadingCurtain>()
+                .FromComponentInNewPrefabResource(InfrastructureAssetPath.CurtainPath).AsSingle();
+            
+            Container.Bind<IAwaitingOverlay>().To<AwaitingOverlay>()
+                .FromComponentInNewPrefabResource(InfrastructureAssetPath.AwaitingOverlay).AsSingle();
+            
+            Container.Bind<ErrorPopup>()
+                .FromComponentInNewPrefabResource(InfrastructureAssetPath.ErrorPopup).AsSingle();
+        }
 
         private void BindGameStateMachine()
         {
