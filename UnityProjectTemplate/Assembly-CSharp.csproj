@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{c51339e9-1c0e-d087-e503-bb232cce3894}</ProjectGuid>
+    <ProjectGuid>{81956668-959b-550c-988f-5e964408457f}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Sirenix.OdinInspector.CompatibilityLayer</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,12 +25,12 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\Sirenix.OdinInspector.CompatibilityLayer\</OutputPath>
+    <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
     <DefineConstants>UNITY_2021_3_12;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -41,9 +41,112 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Scripts\SerializedNetworkBehaviour.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Scripts\VectorIntFormatters.cs" />
-     <None Include="Assets\Plugins\Sirenix\Odin Inspector\Scripts\Sirenix.OdinInspector.CompatibilityLayer.asmdef" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\StateMachine.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\Window\WindowId.cs" />
+     <Compile Include="Assets\CodeBase\UI\Overlays\IAwaitingOverlay.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\GameRunner.cs" />
+     <Compile Include="Assets\CodeBase\Services\ServerConnectionService\ServerConnectionService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\GameBootstrapper.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\Services\StaticDataService\IStaticDataService.cs" />
+     <Compile Include="Assets\CodeBase\Services\InputService\InputService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameLoadingState.cs" />
+     <Compile Include="Assets\CodeBase\Data\DataExtensions.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\States\PrivatePolicyState.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\GameLoadingSceneBootstraper.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\States\FinishGameLoadingState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\IStateMachine.cs" />
+     <Compile Include="Assets\CodeBase\Services\InputService\IInputService.cs" />
+     <Compile Include="Assets\CodeBase\Services\SaveLoadService\SaveLoadService.cs" />
+     <Compile Include="Assets\CodeBase\UI\PopUps\PopUpBase.cs" />
+     <Compile Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopup.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\ICoroutineRunner.cs" />
+     <Compile Include="Assets\CodeBase\Data\PlayerProgress.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\States\GDPRState.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\States\ServerConnectState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\Observables\IPublisher.cs" />
+     <Compile Include="Assets\CodeBase\UI\UIInstaller.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\ISceneLoader.cs" />
+     <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IProgressSaver.cs" />
+     <Compile Include="Assets\CodeBase\Services\ServerConnectionService\ConnectionResult.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\Factories\GameFactory.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameHubState.cs" />
+     <Compile Include="Assets\CodeBase\UI\HUD\HUDRoot.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\Factories\IUIFactory.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\InfrastructureAssetPath.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\IExitableState.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\GameLoadingSceneInstaller.cs" />
+     <Compile Include="Assets\CodeBase\UI\Extensions\ButtonAwaiter.cs" />
+     <Compile Include="Assets\CodeBase\UI\Elements\GameStateSwitchButton.cs" />
+     <Compile Include="Assets\CodeBase\UI\Extensions\ButtonExtensions.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactory.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\ILoadingCurtain.cs" />
+     <Compile Include="Assets\CodeBase\Services\LocalizationService\ILocalizationService.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\PopUps\PopUpService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\IPaylodedState.cs" />
+     <Compile Include="Assets\CodeBase\Services\LocalizationService\LocalizationService.cs" />
+     <Compile Include="Assets\CodeBase\GameLoading\States\LoadPlayerProgressState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\IState.cs" />
+     <Compile Include="Assets\CodeBase\Services\AdsService\IAdsService.cs" />
+     <Compile Include="Assets\CodeBase\Services\StaticDataService\StaticDataService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\SceneStateMachine.cs" />
+     <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IPersistentProgressService.cs" />
+     <Compile Include="Assets\CodeBase\UI\Elements\Rotator.cs" />
+     <Compile Include="Assets\CodeBase\Services\ServerConnectionService\IServerConnectionService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\Observables\Publisher.cs" />
+     <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IProgressReader.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\SceneLoader.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameBootstrapState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\StatesFactory.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\Factories\GameFactoryInstaller.cs" />
+     <Compile Include="Assets\CodeBase\Services\ServerConnectionService\ServerConnectionConfig.cs" />
+     <Compile Include="Assets\CodeBase\Services\PlayerProgressService\PersistentProgressService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\Observables\Observable.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\LoadingCurtain.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\CoroutineRunner.cs" />
+     <Compile Include="Assets\CodeBase\Services\SaveLoadService\ISaveLoadService.cs" />
+     <Compile Include="Assets\CodeBase\UI\HUD\IHUDRoot.cs" />
+     <Compile Include="Assets\CodeBase\UI\PopUps\ErrorPopup\ErrorPopup.cs" />
+     <Compile Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopupConfig.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\Window\WindowService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameStateMachine.cs" />
+     <Compile Include="Assets\CodeBase\UI\Overlays\AwaitingOverlay.cs" />
+     <Compile Include="Assets\CodeBase\UI\Windows\WindowBase.cs" />
+     <Compile Include="Assets\CodeBase\Services\AnalyticsService\AnalyticsService.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\PopUps\PopUpId.cs" />
+     <Compile Include="Assets\CodeBase\UI\PopUps\ErrorPopup\ErrorPopupConfig.cs" />
+     <Compile Include="Assets\CodeBase\Services\RandomizerService\RandomExtentions.cs" />
+     <Compile Include="Assets\CodeBase\Services\AdsService\AdsService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\Factories\IGameFactory.cs" />
+     <Compile Include="Assets\CodeBase\Services\AnalyticsService\IAnalyticsService.cs" />
+     <Compile Include="Assets\CodeBase\Services\RandomizerService\IRandomizerService.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\PopUps\IPopUpService.cs" />
+     <Compile Include="Assets\CodeBase\Services\RandomizerService\RandomizerService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameStateMachineInstaller.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactoryInstaller.cs" />
+     <Compile Include="Assets\CodeBase\CompositionRoot\GameInstaller.cs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -290,32 +393,11 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.Graphs">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.Android.Extensions">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.iOS.Extensions">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-     </Reference>
      <Reference Include="Zenject-usage">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-     </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
@@ -323,17 +405,8 @@
      <Reference Include="Sirenix.OdinInspector.Attributes">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-     </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Serialization.Config">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
@@ -358,9 +431,6 @@
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
@@ -743,14 +813,128 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.DOTween">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.Linq">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.TextMeshPro">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UniTask.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.Addressables">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
+      <Project>{c51339e9-1c0e-d087-e503-bb232cce3894}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{b775bef8-7549-9577-76f2-6384727aefbc}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
+      <Project>{ea23c3de-0849-ddb5-cc2b-dbd629415c96}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{b3dc5111-eda8-8803-e540-e2d38d840236}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{a3f6ec8c-833a-0b21-9a0b-93dc894b5fdc}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{c1fe0197-07ba-c5cf-b8f4-d895616b7bd8}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\CodeBase\GameMode1" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

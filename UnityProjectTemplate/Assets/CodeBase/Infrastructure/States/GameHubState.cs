@@ -6,7 +6,13 @@ namespace CodeBase.Infrastructure.States
     {
         private ILoadingCurtain loadingCurtain;
         private ISceneLoader sceneLoader;
-        
+
+        public GameHubState(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader)
+        {
+            this.loadingCurtain = loadingCurtain;
+            this.sceneLoader = sceneLoader;
+        }
+
         public async void Enter()
         {
             Debug.Log("GameHub state exter");
