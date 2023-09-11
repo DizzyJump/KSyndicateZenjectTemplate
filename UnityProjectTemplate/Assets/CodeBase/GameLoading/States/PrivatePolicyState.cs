@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.PlayerProgressService;
+using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.PopUps;
-using CodeBase.UI.Windows.PrivatePolicyAccept;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.GameLoading.States
+namespace CodeBase.GameLoading.States
 {
     public class PrivatePolicyState : IState
     {

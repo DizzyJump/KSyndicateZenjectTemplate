@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using CodeBase.Data;
-using CodeBase.Infrastructure.GameLoading.States;
+using CodeBase.Infrastructure.States;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.SaveLoadService;
 using CodeBase.UI.Overlays;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using Zenject;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.GameLoading.States
 {
     public class LoadPlayerProgressState : IState
     {

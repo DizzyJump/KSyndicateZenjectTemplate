@@ -1,6 +1,6 @@
-﻿using CodeBase.UI.Factories;
-using CodeBase.UI.PopUps.ErrorPopup;
-using CodeBase.UI.Windows.PrivatePolicyAccept;
+﻿using CodeBase.UI.PopUps.ErrorPopup;
+using CodeBase.UI.PopUps.PolicyAcceptPopup;
+using CodeBase.UI.Services.Factories;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 

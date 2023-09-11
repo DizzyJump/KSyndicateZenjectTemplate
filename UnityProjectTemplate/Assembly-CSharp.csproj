@@ -125,6 +125,13 @@
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameStateMachineInstaller.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactoryInstaller.cs" />
      <Compile Include="Assets\CodeBase\CompositionRoot\GameInstaller.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\StartGameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\PlayGameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\WinGameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\FailGameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\FinishGameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\GameMode1SceneInstaller.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\GameMode1SceneBootstraper.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -932,9 +939,6 @@
       <Project>{c1fe0197-07ba-c5cf-b8f4-d895616b7bd8}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\CodeBase\GameMode1" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

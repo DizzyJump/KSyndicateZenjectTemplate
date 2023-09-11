@@ -1,6 +1,6 @@
-﻿using CodeBase.Services.WindowsService;
-using CodeBase.UI.Factories;
+﻿using CodeBase.UI.Services.Factories;
 using CodeBase.UI.Services.PopUps;
+using CodeBase.UI.Services.Window;
 using Zenject;
 
 namespace CodeBase.UI

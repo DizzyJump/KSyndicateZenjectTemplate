@@ -5,32 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea8791ba-f3e2-4bbc-9045-b1f96d0a71a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameHub.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/GameStateSwitchButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneBootstraper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneBootstraper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FailGameMode1State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FailGameMode1State.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/PlayGameMode1State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/PlayGameMode1State.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/StartGameMode1State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/StartGameMode1State.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/WinGameMode1State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/WinGameMode1State.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/FinishGameLoadingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/FinishGameLoadingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/InfrastructureAssetPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/InfrastructureAssetPath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameHubState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameHubState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameHub.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameHub.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityProjectTemplate.sln" beforeDir="false" afterPath="$PROJECT_DIR$/UnityProjectTemplate.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject-IntegrationTests-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-IntegrationTests-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject-IntegrationTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-IntegrationTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject-PoolMonitor-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-PoolMonitor-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject-ReflectionBaking-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-ReflectionBaking-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject-TestFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-TestFramework.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject-UnitTests-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-UnitTests-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zenject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneBootstraper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneBootstraper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/IUIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/IUIFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/IPopUpService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/IPopUpService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/PopUpService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/PopUpService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/UIInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/UIInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/WindowBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/WindowBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +54,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2K8x07jlmuFUhjL2VShu4ayKEh8" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -107,6 +116,7 @@
       <workItem from="1694092362288" duration="8020000" />
       <workItem from="1694173282323" duration="22369000" />
       <workItem from="1694424898507" duration="3983000" />
+      <workItem from="1694429691828" duration="2672000" />
     </task>
     <servers />
   </component>
@@ -148,13 +158,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs</url>
-          <line>26</line>
+          <line>24</line>
           <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopup.cs" initialLine="19" containingFunctionPresentation="method 'Initialize'">
             <startOffsets>
-              <option value="902" />
+              <option value="844" />
             </startOffsets>
             <endOffsets>
-              <option value="926" />
+              <option value="868" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

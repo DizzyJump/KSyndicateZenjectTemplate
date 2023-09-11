@@ -1,6 +1,6 @@
-﻿using CodeBase.UI.Windows.PrivatePolicyAccept;
+﻿using CodeBase.UI.PopUps.PolicyAcceptPopup;
 
-namespace CodeBase.UI.Factories
+namespace CodeBase.UI.Services.Factories
 {
     public class UIFactory : IUIFactory
     {

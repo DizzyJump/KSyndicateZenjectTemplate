@@ -1,4 +1,4 @@
-﻿using CodeBase.UI.Windows.PrivatePolicyAccept;
+﻿using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using Cysharp.Threading.Tasks;
 
 namespace CodeBase.UI.Services.PopUps

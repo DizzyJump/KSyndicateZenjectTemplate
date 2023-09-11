@@ -1,13 +1,11 @@
-﻿using System.Threading.Tasks;
-using CodeBase.Infrastructure.States;
+﻿using CodeBase.Infrastructure.States;
 using CodeBase.Services.ServerConnectionService;
 using CodeBase.Services.StaticDataService;
-using CodeBase.UI.Factories;
 using CodeBase.UI.Overlays;
 using CodeBase.UI.Services.PopUps;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.GameLoading.States
+namespace CodeBase.GameLoading.States
 {
     public class ServerConnectState : IState
     {

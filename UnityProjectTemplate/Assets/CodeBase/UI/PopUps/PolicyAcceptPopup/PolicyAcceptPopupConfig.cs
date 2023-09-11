@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace CodeBase.UI.Windows.PrivatePolicyAccept
+namespace CodeBase.UI.PopUps.PolicyAcceptPopup
 {
     [CreateAssetMenu(menuName = "Configs/UI/Popups/PolicyAcceptPopupConfig")]
     public class PolicyAcceptPopupConfig : ScriptableObject

@@ -1,12 +1,10 @@
 ﻿using CodeBase.Services.LocalizationService;
-using CodeBase.UI.PopUps;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace CodeBase.UI.Windows.PrivatePolicyAccept
+namespace CodeBase.UI.PopUps.PolicyAcceptPopup
 {
     public class PolicyAcceptPopup : PopUpBase<bool, PolicyAcceptPopupConfig>
     {

@@ -1,7 +1,7 @@
-using CodeBase.UI.Windows.PrivatePolicyAccept;
+using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using Zenject;
 
-namespace CodeBase.UI.Factories
+namespace CodeBase.UI.Services.Factories
 {
     public class UIFactoryInstaller : Installer<UIFactoryInstaller>
     {

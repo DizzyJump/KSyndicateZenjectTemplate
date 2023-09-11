@@ -1,10 +1,11 @@
-﻿
-    using CodeBase.Data;
-    using CodeBase.Services.PlayerProgressService;
-    using UnityEngine;
-    using UnityEngine.UI;
-    using Zenject;
+﻿using CodeBase.Data;
+using CodeBase.Services.PlayerProgressService;
+using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
 
+namespace CodeBase.UI.Windows
+{
     public abstract class WindowBase : MonoBehaviour
     {
         [SerializeField] protected Button CloseButton;
@@ -35,3 +36,4 @@
         protected virtual void SubscribeUpdates(){}
         protected virtual void Cleanup(){}
     }
+}
