@@ -5,41 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea8791ba-f3e2-4bbc-9045-b1f96d0a71a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneBootstraper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneBootstraper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FailGameMode1State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FailGameMode1State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/PlayGameMode1State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/PlayGameMode1State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/StartGameMode1State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/StartGameMode1State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/WinGameMode1State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/WinGameMode1State.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneBootstraper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneBootstraper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/IUIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/IUIFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/IPopUpService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/IPopUpService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/PopUpService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/PopUpService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/UIInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/UIInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/WindowBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Windows/WindowBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +85,7 @@
       <workItem from="1694092362288" duration="8020000" />
       <workItem from="1694173282323" duration="22369000" />
       <workItem from="1694424898507" duration="3983000" />
-      <workItem from="1694429691828" duration="2672000" />
+      <workItem from="1694429691828" duration="3879000" />
     </task>
     <servers />
   </component>

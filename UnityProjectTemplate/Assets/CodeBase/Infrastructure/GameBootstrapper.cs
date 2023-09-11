@@ -21,6 +21,7 @@ namespace CodeBase.Infrastructure
             gameStateMachine.RegisterState(statesFactory.Create<GameBootstrapState>());
             gameStateMachine.RegisterState(statesFactory.Create<GameLoadingState>());
             gameStateMachine.RegisterState(statesFactory.Create<GameHubState>());
+            gameStateMachine.RegisterState(statesFactory.Create<GameMode1State>());
             
             gameStateMachine.Enter<GameBootstrapState>();
 
