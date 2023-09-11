@@ -13,6 +13,7 @@ namespace CodeBase.GameLoading.States
         public void Enter()
         {
             Debug.Log("FinishGameLoadingState enter");
+            
             gameStateMachine.Enter<GameHubState>();
         }
 

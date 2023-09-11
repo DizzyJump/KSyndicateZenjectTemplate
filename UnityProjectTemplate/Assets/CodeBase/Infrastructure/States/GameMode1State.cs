@@ -2,17 +2,16 @@
 
 namespace CodeBase.Infrastructure.States
 {
-    public class GameHubState : IState
+    public class GameMode1State : IState
     {
         private ILoadingCurtain loadingCurtain;
         private ISceneLoader sceneLoader;
         
         public async void Enter()
         {
-            Debug.Log("GameHub state exter");
+            Debug.Log("Game mode 1 state enter");
             loadingCurtain.Show();
-            // due to we don't have any substates for this state jet we just load scene with game hub decorations
-            await sceneLoader.Load(InfrastructureAssetPath.GameHubScene);
+            await sceneLoader.Load(InfrastructureAssetPath.GameMode1Scene);
             loadingCurtain.Hide();
         }
 
