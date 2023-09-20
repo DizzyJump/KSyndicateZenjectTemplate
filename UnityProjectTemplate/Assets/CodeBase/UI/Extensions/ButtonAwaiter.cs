@@ -7,7 +7,7 @@ namespace CodeBase.UI.Extensions
     // implemented by following this guide: https://www.youtube.com/watch?v=U6h6p1tJ7XM
     public struct ButtonAwaiter : INotifyCompletion
     {
-        private Button button;
+        private readonly Button button;
         private Action storedContinuation;
 
         public ButtonAwaiter(Button button)

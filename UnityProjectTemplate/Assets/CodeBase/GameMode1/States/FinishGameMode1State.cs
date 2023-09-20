@@ -4,7 +4,7 @@ namespace CodeBase.GameMode1.States
 {
     public class FinishGameMode1State : IState
     {
-        private GameStateMachine gameStateMachine;
+        private readonly GameStateMachine gameStateMachine;
 
         public FinishGameMode1State(GameStateMachine gameStateMachine) => 
             this.gameStateMachine = gameStateMachine;

@@ -1,29 +1,34 @@
-﻿using CodeBase.UI.PopUps.ErrorPopup;
+﻿using System;
+using System.Threading;
+using CodeBase.UI.PopUps.ErrorPopup;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.Factories;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace CodeBase.UI.Services.PopUps
 {
-    public class PopUpService : IPopUpService
+    public class PopUpService : IPopUpService, IDisposable
     {
-        private IUIFactory uiFactory;
-        private ErrorPopup errorPopup;
+        private readonly IUIFactory uiFactory;
+        private readonly ErrorPopup errorPopup;
         
-        private ErrorPopupConfig errorPopupConfig;
+        private readonly ErrorPopupConfig errorPopupConfig;
+
+        private CancellationTokenSource ctn;
         
         public PopUpService(IUIFactory uiFactory, ErrorPopup errorPopup)
         {
             this.uiFactory = uiFactory;
             this.errorPopup = errorPopup;
             errorPopupConfig = new ErrorPopupConfig();
+            ctn = new CancellationTokenSource();
         }
 
         public async UniTask<bool> AskPolicyPopup(PolicyAcceptPopupConfig config)
         {
             var popup = uiFactory.CreatePrivatePolicyPopup();
-            bool result = await popup.Show(config);
+            bool result = await popup.Show(config).AttachExternalCancellation(ctn.Token);
             Object.Destroy(popup);
             return result;
         }
@@ -34,8 +39,11 @@ namespace CodeBase.UI.Services.PopUps
             errorPopupConfig.MessageText = messageBody;
             errorPopupConfig.ButtonText = buttonText;
             
-            await errorPopup.Show(errorPopupConfig);
+            await errorPopup.Show(errorPopupConfig).AttachExternalCancellation(ctn.Token);
             errorPopup.Hide();
         }
+
+        public void Dispose() => 
+            ctn.Cancel();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.LogService;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.PopUps;
@@ -9,22 +10,24 @@ namespace CodeBase.GameLoading.States
 {
     public class PrivatePolicyState : IState
     {
-        private IPopUpService popUpService;
-        private PolicyAcceptPopupConfig privatePolicyPopupConfig;
-        private SceneStateMachine sceneStateMachine;
-        private IPersistentProgressService progressService;
+        private readonly IPopUpService popUpService;
+        private readonly PolicyAcceptPopupConfig privatePolicyPopupConfig;
+        private readonly SceneStateMachine sceneStateMachine;
+        private readonly IPersistentProgressService progressService;
+        private readonly ILogService log;
 
-        public PrivatePolicyState(IPopUpService popUpService, PolicyAcceptPopupConfig privatePolicyPopupConfig, SceneStateMachine sceneStateMachine, IPersistentProgressService progressService)
+        public PrivatePolicyState(IPopUpService popUpService, PolicyAcceptPopupConfig privatePolicyPopupConfig, SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ILogService log)
         {
             this.popUpService = popUpService;
             this.privatePolicyPopupConfig = privatePolicyPopupConfig;
             this.sceneStateMachine = sceneStateMachine;
             this.progressService = progressService;
+            this.log = log;
         }
 
         public async void Enter()
         {
-            Debug.Log("PrivatePolicyState enter");
+            log.Log("PrivatePolicyState enter");
             
             if (!progressService.Progress.PrivatePolicyAccepted) 
                 await AskToAcceptPrivatePolicy();
@@ -32,7 +35,7 @@ namespace CodeBase.GameLoading.States
             if (progressService.Progress.PrivatePolicyAccepted)
                 sceneStateMachine.Enter<GDPRState>();
             else
-                Debug.Log("Player cant play our game due to somehow reject private policy :)");
+                log.Log("Player cant play our game due to somehow reject private policy :)");
         }
 
         private async Task AskToAcceptPrivatePolicy()

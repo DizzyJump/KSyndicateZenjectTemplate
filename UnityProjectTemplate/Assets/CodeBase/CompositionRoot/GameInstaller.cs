@@ -5,6 +5,7 @@ using CodeBase.Services.AdsService;
 using CodeBase.Services.AnalyticsService;
 using CodeBase.Services.InputService;
 using CodeBase.Services.LocalizationService;
+using CodeBase.Services.LogService;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.RandomizerService;
 using CodeBase.Services.SaveLoadService;
@@ -51,7 +52,12 @@ namespace CodeBase.CompositionRoot
             BindServerConnectionService();
 
             BindLocalizationService();
+
+            BindLogService();
         }
+
+        private void BindLogService() => 
+            Container.BindInterfacesTo<LogService>().AsSingle();
 
         private void BindLocalizationService()
         {
@@ -139,10 +145,7 @@ namespace CodeBase.CompositionRoot
                 .FromComponentInNewPrefabResource(InfrastructureAssetPath.ErrorPopup).AsSingle();
         }
 
-        private void BindGameStateMachine()
-        {
+        private void BindGameStateMachine() => 
             GameStateMachineInstaller.Install(Container);
-            Debug.Log("Bind IGameStateMachine");
-        }
     }
 }

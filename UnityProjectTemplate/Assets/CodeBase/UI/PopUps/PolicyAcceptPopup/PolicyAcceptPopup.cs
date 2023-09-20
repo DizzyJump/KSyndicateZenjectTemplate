@@ -1,4 +1,5 @@
 ﻿using CodeBase.Services.LocalizationService;
+using CodeBase.Services.LogService;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,11 +16,15 @@ namespace CodeBase.UI.PopUps.PolicyAcceptPopup
         [SerializeField] private TextMeshProUGUI buttonText;
 
         private ILocalizationService localizationService;
+        private ILogService log;
 
         [Inject]
-        public void Construct(ILocalizationService localizationService) =>
+        public void Construct(ILocalizationService localizationService, ILogService log)
+        {
             this.localizationService = localizationService;
-        
+            this.log = log;
+        }
+
         protected override void Initialize(PolicyAcceptPopupConfig config)
         {
             base.Initialize(config);
@@ -49,7 +54,7 @@ namespace CodeBase.UI.PopUps.PolicyAcceptPopup
 
         void OnToggleChange(bool value)
         {
-            Debug.Log($"Private policy acceptance set to: {value}");
+            log.Log($"Private policy acceptance set to: {value}");
             UpdateCloseButton(value);
         }
 

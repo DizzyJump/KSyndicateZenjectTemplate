@@ -1,5 +1,6 @@
 ﻿using CodeBase.GameLoading.States;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.LogService;
 using UnityEngine;
 using Zenject;
 
@@ -7,18 +8,20 @@ namespace CodeBase.GameLoading
 {
     public class GameLoadingSceneBootstraper : IInitializable
     {
-        private SceneStateMachine sceneStateMachine;
-        private StatesFactory statesFactory;
+        private readonly SceneStateMachine sceneStateMachine;
+        private readonly StatesFactory statesFactory;
+        private readonly ILogService log;
 
-        public GameLoadingSceneBootstraper(SceneStateMachine sceneStateMachine, StatesFactory statesFactory)
+        public GameLoadingSceneBootstraper(SceneStateMachine sceneStateMachine, StatesFactory statesFactory, ILogService log)
         {
             this.sceneStateMachine = sceneStateMachine;
             this.statesFactory = statesFactory;
+            this.log = log;
         }
 
         public void Initialize()
         {
-            Debug.Log("Start loading scene bootstraping");
+            log.Log("Start loading scene bootstraping");
 
             sceneStateMachine.RegisterState(statesFactory.Create<ServerConnectState>());
             sceneStateMachine.RegisterState(statesFactory.Create<LoadPlayerProgressState>());
@@ -26,7 +29,7 @@ namespace CodeBase.GameLoading
             sceneStateMachine.RegisterState(statesFactory.Create<GDPRState>());
             sceneStateMachine.RegisterState(statesFactory.Create<FinishGameLoadingState>());
 
-            Debug.Log("Finish loading scene bootstraping");
+            log.Log("Finish loading scene bootstraping");
             
             // go to the first scene state
             sceneStateMachine.Enter<ServerConnectState>();

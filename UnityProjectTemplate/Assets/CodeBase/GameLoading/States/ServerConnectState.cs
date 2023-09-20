@@ -1,4 +1,5 @@
 ﻿using CodeBase.Infrastructure.States;
+using CodeBase.Services.LogService;
 using CodeBase.Services.ServerConnectionService;
 using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Overlays;
@@ -9,24 +10,26 @@ namespace CodeBase.GameLoading.States
 {
     public class ServerConnectState : IState
     {
-        private IServerConnectionService serverConnectionService;
-        private IStaticDataService staticDataService;
-        private SceneStateMachine sceneStateMachine;
-        private IAwaitingOverlay awaitingOverlay;
-        private IPopUpService popUpService;
+        private readonly IServerConnectionService serverConnectionService;
+        private readonly IStaticDataService staticDataService;
+        private readonly SceneStateMachine sceneStateMachine;
+        private readonly IAwaitingOverlay awaitingOverlay;
+        private readonly IPopUpService popUpService;
+        private readonly ILogService log;
 
-        public ServerConnectState(IServerConnectionService serverConnectionService, IStaticDataService staticDataService, SceneStateMachine sceneStateMachine, IAwaitingOverlay awaitingOverlay, IPopUpService popUpService)
+        public ServerConnectState(IServerConnectionService serverConnectionService, IStaticDataService staticDataService, SceneStateMachine sceneStateMachine, IAwaitingOverlay awaitingOverlay, IPopUpService popUpService, ILogService log)
         {
             this.serverConnectionService = serverConnectionService;
             this.staticDataService = staticDataService;
             this.sceneStateMachine = sceneStateMachine;
             this.awaitingOverlay = awaitingOverlay;
             this.popUpService = popUpService;
+            this.log = log;
         }
 
         public async void Enter()
         {
-            Debug.Log("ServerConnectState enter");
+            log.Log("ServerConnectState enter");
             awaitingOverlay.Show("Connection to server...");
             
             ConnectionResult result = await serverConnectionService.Connect(staticDataService.ServerConnectionConfig);

@@ -5,7 +5,7 @@ namespace CodeBase.Infrastructure.States
     public class GameLoadingState : IState
     {
         private readonly ILoadingCurtain loadingCurtain;
-        private ISceneLoader sceneLoader;
+        private readonly ISceneLoader sceneLoader;
 
         public GameLoadingState(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader)
         {

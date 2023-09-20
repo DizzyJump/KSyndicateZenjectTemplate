@@ -5,7 +5,7 @@ namespace CodeBase.UI.Services.Window
 {
     public class WindowService
     {
-        private IUIFactory uiFactory;
+        private readonly IUIFactory uiFactory;
 
         public WindowService(IUIFactory uiFactory)
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using CodeBase.Data;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.LogService;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.SaveLoadService;
 using CodeBase.UI.Overlays;
@@ -15,20 +16,22 @@ namespace CodeBase.GameLoading.States
         private readonly ISaveLoadService saveLoadService;
         private readonly IEnumerable<IProgressReader> progressReaderServices;
         private readonly IPersistentProgressService progressService;
-        private IAwaitingOverlay awaitingOverlay;
+        private readonly IAwaitingOverlay awaitingOverlay;
+        private readonly ILogService log;
 
-        public LoadPlayerProgressState(SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices, IAwaitingOverlay awaitingOverlay)
+        public LoadPlayerProgressState(SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ISaveLoadService saveLoadService, IEnumerable<IProgressReader> progressReaderServices, IAwaitingOverlay awaitingOverlay, ILogService log)
         {
             this.sceneStateMachine = sceneStateMachine;
             this.saveLoadService = saveLoadService;
             this.progressService = progressService;
             this.progressReaderServices = progressReaderServices;
             this.awaitingOverlay = awaitingOverlay;
+            this.log = log;
         }
 
         public async void Enter()
         {
-            Debug.Log("LoadPlayerProgressState enter");
+            log.Log("LoadPlayerProgressState enter");
             
             awaitingOverlay.Show("Loading player progress...");
             
@@ -50,7 +53,7 @@ namespace CodeBase.GameLoading.States
 
         public void Exit()
         {
-            Debug.Log("LoadPlayerProgressState exit");
+            log.Log("LoadPlayerProgressState exit");
             
         }
 
@@ -66,7 +69,7 @@ namespace CodeBase.GameLoading.States
         {
             var progress =  new PlayerProgress();
 
-            Debug.Log("Init new player progress");
+            log.Log("Init new player progress");
             // init start state of progress here
 
             progress.PrivatePolicyAccepted = false;

@@ -5,7 +5,7 @@ namespace CodeBase.Infrastructure.States
 {
     public abstract class StateMachine : IStateMachine
     {
-        private Dictionary<System.Type, IExitableState> registeredStates;
+        private readonly Dictionary<System.Type, IExitableState> registeredStates;
         private IExitableState currentState;
 
         public StateMachine() => 

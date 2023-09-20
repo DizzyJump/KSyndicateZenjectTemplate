@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using CodeBase.Services.AdsService;
 using CodeBase.Services.AnalyticsService;
+using CodeBase.Services.LogService;
 using CodeBase.Services.StaticDataService;
 using UnityEngine;
 using Zenject;
@@ -13,23 +14,25 @@ namespace CodeBase.Infrastructure.States
         private readonly IAdsService adsService;
         private readonly IStaticDataService staticDataService;
         private readonly IAnalyticsService analyticsService;
+        private readonly ILogService log;
 
         public GameBootstrapState(GameStateMachine gameStateMachine,
             IAdsService adsService,
             IStaticDataService staticDataService,
-            IAnalyticsService analyticsService)
+            IAnalyticsService analyticsService,
+            ILogService log)
         {
-            Debug.Log("BootstrapState constructor");
             this.adsService = adsService;
             this.staticDataService = staticDataService;
             this.gameStateMachine = gameStateMachine;
             this.staticDataService = staticDataService;
             this.analyticsService = analyticsService;
+            this.log = log;
         }
 
         public void Enter()
         {
-            Debug.Log("BootstrapState Enter");
+            log.Log("BootstrapState Enter");
             
             InitServices();
             
@@ -46,7 +49,6 @@ namespace CodeBase.Infrastructure.States
 
         public void Exit()
         {
-            Debug.Log("BootstrapState Exit");
         }
     }
 }

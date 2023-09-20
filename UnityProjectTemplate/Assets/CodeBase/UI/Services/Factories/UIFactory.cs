@@ -4,7 +4,7 @@ namespace CodeBase.UI.Services.Factories
 {
     public class UIFactory : IUIFactory
     {
-        PolicyAcceptPopup.Factory privatePolicyWindowFactory;
+        readonly PolicyAcceptPopup.Factory privatePolicyWindowFactory;
 
         public UIFactory(PolicyAcceptPopup.Factory privatePolicyWindowFactory)
         {

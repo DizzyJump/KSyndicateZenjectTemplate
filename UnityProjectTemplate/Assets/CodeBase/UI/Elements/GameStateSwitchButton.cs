@@ -1,5 +1,6 @@
 ﻿using System;
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.LogService;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,11 +14,15 @@ namespace CodeBase.UI.Elements
         [SerializeField] private Button button;
 
         private GameStateMachine gameStateMachine;
+        private ILogService log;
 
         [Inject]
-        void Construct(GameStateMachine gameStateMachine) =>
+        void Construct(GameStateMachine gameStateMachine, ILogService log)
+        {
             this.gameStateMachine = gameStateMachine;
-        
+            this.log = log;
+        }
+
         private void OnEnable() => 
             button.onClick.AddListener(OnClick);
 
@@ -31,7 +36,7 @@ namespace CodeBase.UI.Elements
                 case 0: gameStateMachine.Enter<GameLoadingState>(); break;
                 case 1: gameStateMachine.Enter<GameHubState>(); break;
                 case 2: gameStateMachine.Enter<GameMode1State>(); break;
-                default: Debug.LogError("Not valid option"); break;
+                default: log.LogError("Not valid option"); break;
             }
         }
 

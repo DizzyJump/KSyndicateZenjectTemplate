@@ -46,13 +46,16 @@
      <Compile Include="Assets\CodeBase\UI\Overlays\IAwaitingOverlay.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameRunner.cs" />
      <Compile Include="Assets\CodeBase\Services\ServerConnectionService\ServerConnectionService.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\FinishGameMode1State.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameBootstrapper.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameMode1State.cs" />
      <Compile Include="Assets\CodeBase\Services\StaticDataService\IStaticDataService.cs" />
      <Compile Include="Assets\CodeBase\Services\InputService\InputService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameLoadingState.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\GameMode1SceneBootstraper.cs" />
      <Compile Include="Assets\CodeBase\Data\DataExtensions.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\States\PrivatePolicyState.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\FailGameMode1State.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\GameLoadingSceneBootstraper.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\States\FinishGameLoadingState.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IStateMachine.cs" />
@@ -61,6 +64,7 @@
      <Compile Include="Assets\CodeBase\UI\PopUps\PopUpBase.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopup.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\ICoroutineRunner.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\WinGameMode1State.cs" />
      <Compile Include="Assets\CodeBase\Data\PlayerProgress.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\States\GDPRState.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\States\ServerConnectState.cs" />
@@ -81,6 +85,7 @@
      <Compile Include="Assets\CodeBase\UI\Extensions\ButtonExtensions.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactory.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\ILoadingCurtain.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\PlayGameMode1State.cs" />
      <Compile Include="Assets\CodeBase\Services\LocalizationService\ILocalizationService.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\PopUps\PopUpService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IPaylodedState.cs" />
@@ -90,6 +95,7 @@
      <Compile Include="Assets\CodeBase\Services\AdsService\IAdsService.cs" />
      <Compile Include="Assets\CodeBase\Services\StaticDataService\StaticDataService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\SceneStateMachine.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\GameMode1SceneInstaller.cs" />
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IPersistentProgressService.cs" />
      <Compile Include="Assets\CodeBase\UI\Elements\Rotator.cs" />
      <Compile Include="Assets\CodeBase\Services\ServerConnectionService\IServerConnectionService.cs" />
@@ -105,8 +111,11 @@
      <Compile Include="Assets\CodeBase\Infrastructure\LoadingCurtain.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\CoroutineRunner.cs" />
      <Compile Include="Assets\CodeBase\Services\SaveLoadService\ISaveLoadService.cs" />
+     <Compile Include="Assets\CodeBase\Services\LogService\LogService.cs" />
      <Compile Include="Assets\CodeBase\UI\HUD\IHUDRoot.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\ErrorPopup\ErrorPopup.cs" />
+     <Compile Include="Assets\CodeBase\GameMode1\States\StartGameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\Services\LogService\ILogService.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopupConfig.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Window\WindowService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameStateMachine.cs" />
@@ -125,13 +134,6 @@
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameStateMachineInstaller.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactoryInstaller.cs" />
      <Compile Include="Assets\CodeBase\CompositionRoot\GameInstaller.cs" />
-     <Compile Include="Assets\CodeBase\GameMode1\States\StartGameMode1State.cs" />
-     <Compile Include="Assets\CodeBase\GameMode1\States\PlayGameMode1State.cs" />
-     <Compile Include="Assets\CodeBase\GameMode1\States\WinGameMode1State.cs" />
-     <Compile Include="Assets\CodeBase\GameMode1\States\FailGameMode1State.cs" />
-     <Compile Include="Assets\CodeBase\GameMode1\States\FinishGameMode1State.cs" />
-     <Compile Include="Assets\CodeBase\GameMode1\GameMode1SceneInstaller.cs" />
-     <Compile Include="Assets\CodeBase\GameMode1\GameMode1SceneBootstraper.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

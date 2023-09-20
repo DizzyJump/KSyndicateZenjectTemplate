@@ -4,7 +4,7 @@ namespace CodeBase.GameMode1.States
 {
     public class StartGameMode1State : IState
     {
-        private SceneStateMachine sceneStateMachine;
+        private readonly SceneStateMachine sceneStateMachine;
 
         public StartGameMode1State(SceneStateMachine sceneStateMachine) => 
             this.sceneStateMachine = sceneStateMachine;
