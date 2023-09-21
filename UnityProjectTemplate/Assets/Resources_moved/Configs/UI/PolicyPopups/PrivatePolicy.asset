@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba98317452b04cd3a7ea627a6b1cd890, type: 3}
   m_Name: PrivatePolicy
   m_EditorClassIdentifier: 
+  Type: 2
   PolicyText: 'Some private policy. Accept to continue.
 
     Some private policy.

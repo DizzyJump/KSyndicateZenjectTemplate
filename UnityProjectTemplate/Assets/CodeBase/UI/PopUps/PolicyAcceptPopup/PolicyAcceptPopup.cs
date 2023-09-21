@@ -1,5 +1,6 @@
 ﻿using CodeBase.Services.LocalizationService;
 using CodeBase.Services.LogService;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -71,7 +72,7 @@ namespace CodeBase.UI.PopUps.PolicyAcceptPopup
         void OnButtonClick() => 
             SetPopUpResult(toggle.isOn);
 
-        public class Factory : PlaceholderFactory<PolicyAcceptPopup>
+        public class Factory : PlaceholderFactory<string, UniTask<PolicyAcceptPopup>>
         {
         }
     }

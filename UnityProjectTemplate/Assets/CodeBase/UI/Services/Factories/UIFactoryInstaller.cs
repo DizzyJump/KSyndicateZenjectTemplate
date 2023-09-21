@@ -1,4 +1,6 @@
+using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
+using Cysharp.Threading.Tasks;
 using Zenject;
 
 namespace CodeBase.UI.Services.Factories
@@ -11,7 +13,10 @@ namespace CodeBase.UI.Services.Factories
             
             Container.Bind<IUIFactory>().To<UIFactory>().AsSingle();
 
-            Container.BindFactory<PolicyAcceptPopup, PolicyAcceptPopup.Factory>().FromComponentInNewPrefabResource("Prefabs/UI/Popups/PolicyPopup");
+            // that an example of making zenject factories working in async way
+            Container
+                .BindFactory<string, UniTask<PolicyAcceptPopup>, PolicyAcceptPopup.Factory>()
+                .FromFactory<PrefabFactoryAsync<PolicyAcceptPopup>>();
         }
     }
 }

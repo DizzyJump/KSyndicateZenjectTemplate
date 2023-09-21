@@ -1,28 +1,37 @@
 ﻿using System.Threading.Tasks;
+using CodeBase.Infrastructure.AssetManagement;
 
 namespace CodeBase.Infrastructure.States
 {
     public class GameLoadingState : IState
     {
         private readonly ILoadingCurtain loadingCurtain;
-        private readonly ISceneLoader sceneLoader;
+        private readonly ISceneProvider sceneProvider;
+        private readonly IAssetProvider assetProvider;
 
-        public GameLoadingState(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader)
+        public GameLoadingState(ILoadingCurtain loadingCurtain, ISceneProvider sceneProvider, IAssetProvider assetProvider)
         {
             this.loadingCurtain = loadingCurtain;
-            this.sceneLoader = sceneLoader;
-        }
-
-        public void Exit()
-        {
-            loadingCurtain.Show();
+            this.sceneProvider = sceneProvider;
+            this.assetProvider = assetProvider;
         }
 
         public async void Enter()
         {
             loadingCurtain.Show();
-            await sceneLoader.Load(InfrastructureAssetPath.GameLoadingScene);
+            
+            await assetProvider.WarmupAssetsByLabel(AssetLabels.GameLoadingState);
+            await sceneProvider.Load(InfrastructureAssetPath.GameLoadingScene);
+            
             loadingCurtain.Hide();
+        }
+
+        public async void Exit()
+        {
+            loadingCurtain.Show();
+            
+            await sceneProvider.Unload(InfrastructureAssetPath.GameLoadingScene);
+            await assetProvider.ReleaseAssetsByLabel(AssetLabels.GameLoadingState);
         }
     }
 }

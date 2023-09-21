@@ -1,4 +1,5 @@
 ﻿using CodeBase.UI.PopUps.PolicyAcceptPopup;
+using Cysharp.Threading.Tasks;
 
 namespace CodeBase.UI.Services.Factories
 {
@@ -6,6 +7,6 @@ namespace CodeBase.UI.Services.Factories
     {
         
         void Cleanup();
-        PolicyAcceptPopup CreatePrivatePolicyPopup();
+        UniTask<PolicyAcceptPopup> CreatePolicyAskingPopup();
     }
 }

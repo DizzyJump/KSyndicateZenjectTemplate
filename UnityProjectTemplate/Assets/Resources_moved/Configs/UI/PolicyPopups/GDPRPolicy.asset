@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba98317452b04cd3a7ea627a6b1cd890, type: 3}
   m_Name: GDPRPolicy
   m_EditorClassIdentifier: 
+  Type: 1
   PolicyText: 'Some GDPR policy. Accept to continue.
 
     Some GDPR policy. Accept

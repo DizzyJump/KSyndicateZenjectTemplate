@@ -2,6 +2,7 @@
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
 using CodeBase.Services.PlayerProgressService;
+using CodeBase.Services.StaticDataService;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.PopUps;
 using UnityEngine;
@@ -11,18 +12,18 @@ namespace CodeBase.GameLoading.States
     public class PrivatePolicyState : IState
     {
         private readonly IPopUpService popUpService;
-        private readonly PolicyAcceptPopupConfig privatePolicyPopupConfig;
         private readonly SceneStateMachine sceneStateMachine;
         private readonly IPersistentProgressService progressService;
         private readonly ILogService log;
+        private readonly IStaticDataService staticData;
 
-        public PrivatePolicyState(IPopUpService popUpService, PolicyAcceptPopupConfig privatePolicyPopupConfig, SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ILogService log)
+        public PrivatePolicyState(IPopUpService popUpService, IStaticDataService staticData, SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ILogService log)
         {
             this.popUpService = popUpService;
-            this.privatePolicyPopupConfig = privatePolicyPopupConfig;
             this.sceneStateMachine = sceneStateMachine;
             this.progressService = progressService;
             this.log = log;
+            this.staticData = staticData;
         }
 
         public async void Enter()
@@ -40,7 +41,9 @@ namespace CodeBase.GameLoading.States
 
         private async Task AskToAcceptPrivatePolicy()
         {
-            bool result = await popUpService.AskPolicyPopup(privatePolicyPopupConfig);
+            var popupConfig = staticData.GetPolicyAcceptPopupConfig(PolicyAcceptPopupTypes.PrivatePolicy);
+            
+            bool result = await popUpService.AskPolicyPopup(popupConfig);
             
             progressService.Progress.PrivatePolicyAccepted = result;
         }

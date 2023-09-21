@@ -25,10 +25,10 @@ namespace CodeBase.GameLoading
             
             UIInstaller.Install(Container);
 
-            BindPopupConfigs();
+            //BindPopupConfigs();
         }
 
-        private void BindPopupConfigs()
+        /*private void BindPopupConfigs()
         {
             Container
                 .Bind<PolicyAcceptPopupConfig>()
@@ -41,6 +41,6 @@ namespace CodeBase.GameLoading
                 .FromScriptableObjectResource("Configs/UI/PolicyPopups/GDPRPolicy")
                 .AsTransient()
                 .WhenInjectedInto<GDPRState>();
-        }
+        }*/
     }
 }

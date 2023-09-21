@@ -16,7 +16,49 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 8ff701e3efa5c1e4db28a32dbe4abcbb
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 43a2e6023f1dcdf46908ff787d6b8e59
+    m_Address: Server Connection Config
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a5263a847478254298ab14ca0c8634e
+    m_Address: PrivatePolicy
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf448372ab892a34bab7fd451acfeaf2
+    m_Address: GDPRPolicy
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d1f84f3753b72d4aa36415c3f8108f3
+    m_Address: PolicyPopup
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GameLoadingState
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad07e18c24ceee640ac560bf10ed83e3
+    m_Address: GameHub
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Scenes
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9c3429a33f562a499b9c522e24befd2
+    m_Address: GameMode1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Scenes
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa6d9a4c1c26c634f810dc13d072f027
+    m_Address: LoadingScene
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Scenes
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 58f1d24dc6e3bb6498c7dbdc20d2a86e, type: 2}
   m_SchemaSet:

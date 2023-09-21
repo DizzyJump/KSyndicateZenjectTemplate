@@ -8,14 +8,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoostrapScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
-    guid: aa6d9a4c1c26c634f810dc13d072f027
-  - enabled: 1
-    path: Assets/Scenes/GameHub.unity
-    guid: ad07e18c24ceee640ac560bf10ed83e3
-  - enabled: 1
-    path: Assets/Scenes/GameMode1.unity
-    guid: f9c3429a33f562a499b9c522e24befd2
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: faf8c8d95ce66c74abf9a6dd03e63076, type: 2}

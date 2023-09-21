@@ -27,7 +27,7 @@ namespace CodeBase.UI.Services.PopUps
 
         public async UniTask<bool> AskPolicyPopup(PolicyAcceptPopupConfig config)
         {
-            var popup = uiFactory.CreatePrivatePolicyPopup();
+            var popup = await uiFactory.CreatePolicyAskingPopup();
             bool result = await popup.Show(config).AttachExternalCancellation(ctn.Token);
             Object.Destroy(popup);
             return result;

@@ -1,4 +1,5 @@
 using CodeBase.Infrastructure;
+using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factories;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.AdsService;
@@ -14,7 +15,6 @@ using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Overlays;
 using CodeBase.UI.PopUps.ErrorPopup;
 using CodeBase.UI.Services.Factories;
-using UnityEngine;
 using Zenject;
 
 namespace CodeBase.CompositionRoot
@@ -54,15 +54,18 @@ namespace CodeBase.CompositionRoot
             BindLocalizationService();
 
             BindLogService();
+
+            BindAssetProvider();
         }
+
+        private void BindAssetProvider() => 
+            Container.BindInterfacesTo<AssetProvider>().AsSingle();
 
         private void BindLogService() => 
             Container.BindInterfacesTo<LogService>().AsSingle();
 
-        private void BindLocalizationService()
-        {
+        private void BindLocalizationService() => 
             Container.BindInterfacesTo<LocalizationService>().AsSingle();
-        }
 
         private void BindServerConnectionService() => 
             Container.BindInterfacesTo<ServerConnectionService>().AsSingle();
@@ -131,7 +134,7 @@ namespace CodeBase.CompositionRoot
         }
 
         private void BindSceneLoader() => 
-            Container.BindInterfacesAndSelfTo<SceneLoader>().AsSingle();
+            Container.BindInterfacesAndSelfTo<SceneProvider>().AsSingle();
 
         private void BindCurtains()
         {

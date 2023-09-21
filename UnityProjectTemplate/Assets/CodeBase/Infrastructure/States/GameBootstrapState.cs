@@ -1,8 +1,10 @@
 ﻿using System.Threading.Tasks;
+using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Services.AdsService;
 using CodeBase.Services.AnalyticsService;
 using CodeBase.Services.LogService;
 using CodeBase.Services.StaticDataService;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
@@ -15,11 +17,13 @@ namespace CodeBase.Infrastructure.States
         private readonly IStaticDataService staticDataService;
         private readonly IAnalyticsService analyticsService;
         private readonly ILogService log;
+        private readonly IAssetProvider assetProvider;
 
         public GameBootstrapState(GameStateMachine gameStateMachine,
             IAdsService adsService,
             IStaticDataService staticDataService,
             IAnalyticsService analyticsService,
+            IAssetProvider assetProvider,
             ILogService log)
         {
             this.adsService = adsService;
@@ -27,23 +31,25 @@ namespace CodeBase.Infrastructure.States
             this.gameStateMachine = gameStateMachine;
             this.staticDataService = staticDataService;
             this.analyticsService = analyticsService;
+            this.assetProvider = assetProvider;
             this.log = log;
         }
 
-        public void Enter()
+        public async void Enter()
         {
             log.Log("BootstrapState Enter");
             
-            InitServices();
+            await InitServices();
             
             gameStateMachine.Enter<GameLoadingState>();
         }
 
-        private async void InitServices()
+        private async UniTask InitServices()
         {
             // init mandatory global services here
+            await assetProvider.Initialize();
+            await staticDataService.Initialize();
             analyticsService.Initialize();
-            staticDataService.Initialize();
             adsService.Initialize();
         }
 

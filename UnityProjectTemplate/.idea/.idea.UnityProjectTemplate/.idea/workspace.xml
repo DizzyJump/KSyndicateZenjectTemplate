@@ -5,33 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea8791ba-f3e2-4bbc-9045-b1f96d0a71a0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetLabels.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetLabels.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/PrefabFactoryAsync.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/PrefabFactoryAsync.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneManagement.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneManagement/SceneProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryAssets.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryAssets.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneBootstraper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneBootstraper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/FinishGameLoadingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/FinishGameLoadingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/GameLoadingSceneInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneBootstraper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/GameMode1SceneBootstraper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/StartGameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/StartGameMode1State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/ISceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneManagement/ISceneProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/ISceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneManagement/ISceneProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneManagement/SceneProvider.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameBootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameBootstrapState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameHubState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameHubState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoadingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoadingState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/AdsService/AdsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/AdsService/AdsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/StaticDataService/IStaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/StaticDataService/IStaticDataService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/StaticDataService/StaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/StaticDataService/StaticDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/GameStateSwitchButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/GameStateSwitchButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Extensions/ButtonAwaiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Extensions/ButtonAwaiter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PopUpBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PopUpBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopupConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/IUIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/IUIFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Factories/UIFactoryInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/PopUpService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/PopUps/PopUpService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Services/Window/WindowService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Services/Server Connection Config.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Services/Server Connection Config.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/UI/PolicyPopups/GDPRPolicy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/UI/PolicyPopups/GDPRPolicy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/UI/PolicyPopups/PrivatePolicy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/UI/PolicyPopups/PrivatePolicy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Infrastructure/AwaitingOverlay.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Infrastructure/AwaitingOverlay.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Popups/PolicyPopup.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Popups/PolicyPopup.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +62,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/787acc3c9a4c471ba7d971300105af2446ac00/c1/3fe7fae3/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Services/LogService/LogService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/Windows/WindowBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Framework/Events/GUI/OnButtonClick.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.17/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +93,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -111,6 +135,9 @@
       <workItem from="1694424898507" duration="3983000" />
       <workItem from="1694429691828" duration="4474000" />
       <workItem from="1695200111965" duration="3479000" />
+      <workItem from="1695298372158" duration="7853000" />
+      <workItem from="1695309199910" duration="8858000" />
+      <workItem from="1695324229653" duration="2083000" />
     </task>
     <servers />
   </component>
@@ -152,16 +179,120 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/UI/PopUps/PolicyAcceptPopup/PolicyAcceptPopup.cs</url>
-          <line>29</line>
+          <line>30</line>
           <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopup.cs" initialLine="19" containingFunctionPresentation="method 'Initialize'">
             <startOffsets>
-              <option value="967" />
+              <option value="998" />
             </startOffsets>
             <endOffsets>
-              <option value="991" />
+              <option value="1022" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoadingState.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\States\GameLoadingState.cs" initialLine="22" containingFunctionPresentation="method 'Enter'">
+            <startOffsets>
+              <option value="733" />
+            </startOffsets>
+            <endOffsets>
+              <option value="803" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs</url>
+          <line>71</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\AssetManagement\AssetProvider.cs" initialLine="71" containingFunctionPresentation="method 'ReleaseAssetsByLabel'">
+            <startOffsets>
+              <option value="2428" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2479" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs</url>
+          <line>65</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\AssetManagement\AssetProvider.cs" initialLine="65" containingFunctionPresentation="method 'WarmupAssetsByLabel'">
+            <startOffsets>
+              <option value="2232" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2283" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneManagement/SceneProvider.cs</url>
+          <line>25</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\SceneManagement\SceneProvider.cs" initialLine="25" containingFunctionPresentation="method 'Load'">
+            <startOffsets>
+              <option value="752" />
+            </startOffsets>
+            <endOffsets>
+              <option value="796" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneManagement/SceneProvider.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\SceneManagement\SceneProvider.cs" initialLine="38" containingFunctionPresentation="method 'Unload'">
+            <startOffsets>
+              <option value="1226" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1279" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoadingState.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\States\GameLoadingState.cs" initialLine="20" containingFunctionPresentation="method 'Enter'">
+            <startOffsets>
+              <option value="685" />
+            </startOffsets>
+            <endOffsets>
+              <option value="707" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameBootstrapState.cs</url>
+          <line>41</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\States\GameBootstrapState.cs" initialLine="41" containingFunctionPresentation="method 'Enter'">
+            <startOffsets>
+              <option value="1472" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1493" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs</url>
+          <line>19</line>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\AssetManagement\AssetProvider.cs" initialLine="19" containingFunctionPresentation="method 'Load'">
+            <startOffsets>
+              <option value="616" />
+            </startOffsets>
+            <endOffsets>
+              <option value="644" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

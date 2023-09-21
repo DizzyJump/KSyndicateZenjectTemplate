@@ -2,6 +2,7 @@
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
 using CodeBase.Services.PlayerProgressService;
+using CodeBase.Services.StaticDataService;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.PopUps;
 using UnityEngine;
@@ -11,18 +12,18 @@ namespace CodeBase.GameLoading.States
     public class GDPRState : IState
     {
         private readonly IPopUpService popUpService;
-        private readonly PolicyAcceptPopupConfig gdprPolicyPopupConfig;
         private readonly SceneStateMachine sceneStateMachine;
         private readonly IPersistentProgressService progressService;
         private readonly ILogService log;
+        private readonly IStaticDataService staticDataService;
 
-        public GDPRState(IPopUpService popUpService, PolicyAcceptPopupConfig gdprPolicyPopupConfig, SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ILogService log)
+        public GDPRState(IPopUpService popUpService, IStaticDataService staticDataService, SceneStateMachine sceneStateMachine, IPersistentProgressService progressService, ILogService log)
         {
             this.popUpService = popUpService;
-            this.gdprPolicyPopupConfig = gdprPolicyPopupConfig;
             this.sceneStateMachine = sceneStateMachine;
             this.progressService = progressService;
             this.log = log;
+            this.staticDataService = staticDataService;
         }
 
         public async void Enter()
@@ -40,7 +41,9 @@ namespace CodeBase.GameLoading.States
 
         private async Task AskToAcceptGDPRPolicy()
         {
-            bool result = await popUpService.AskPolicyPopup(gdprPolicyPopupConfig);
+            var popupConfig = staticDataService.GetPolicyAcceptPopupConfig(PolicyAcceptPopupTypes.GDPR);
+            
+            bool result = await popUpService.AskPolicyPopup(popupConfig);
 
             progressService.Progress.GDPRPolicyAccepted = result;
         }

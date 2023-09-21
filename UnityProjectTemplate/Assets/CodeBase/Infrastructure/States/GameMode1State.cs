@@ -1,4 +1,5 @@
-﻿using CodeBase.Services.LogService;
+﻿using CodeBase.Infrastructure.AssetManagement;
+using CodeBase.Services.LogService;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.States
@@ -6,27 +7,32 @@ namespace CodeBase.Infrastructure.States
     public class GameMode1State : IState
     {
         private readonly ILoadingCurtain loadingCurtain;
-        private readonly ISceneLoader sceneLoader;
+        private readonly ISceneProvider sceneProvider;
         private readonly ILogService log;
+        private readonly IAssetProvider assetProvider;
 
-        public GameMode1State(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader, ILogService log)
+        public GameMode1State(ILoadingCurtain loadingCurtain, ISceneProvider sceneProvider, ILogService log, IAssetProvider assetProvider)
         {
             this.loadingCurtain = loadingCurtain;
-            this.sceneLoader = sceneLoader;
+            this.sceneProvider = sceneProvider;
             this.log = log;
+            this.assetProvider = assetProvider;
         }
 
         public async void Enter()
         {
             log.Log("Game mode 1 state enter");
             loadingCurtain.Show();
-            await sceneLoader.Load(InfrastructureAssetPath.GameMode1Scene);
+            await assetProvider.WarmupAssetsByLabel(AssetLabels.GameplayState);
+            await sceneProvider.Load(InfrastructureAssetPath.GameMode1Scene);
             loadingCurtain.Hide();
         }
 
-        public void Exit()
+        public async void Exit()
         {
-            
+            loadingCurtain.Show();
+            await sceneProvider.Unload(InfrastructureAssetPath.GameMode1Scene);
+            await assetProvider.ReleaseAssetsByLabel(AssetLabels.GameplayState);
         }
     }
 }

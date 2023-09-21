@@ -59,9 +59,12 @@
      <Compile Include="Assets\CodeBase\GameLoading\States\ServerConnectState.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameStateMachine.cs" />
      <Compile Include="Assets\CodeBase\UI\HUD\IHUDRoot.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\AssetManagement\AssetProvider.cs" />
+     <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactoryAssets.cs" />
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IPersistentProgressService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\StatesFactory.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\AssetManagement\PrefabFactoryAsync.cs" />
      <Compile Include="Assets\CodeBase\Services\LogService\LogService.cs" />
      <Compile Include="Assets\CodeBase\Services\StaticDataService\StaticDataService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IPaylodedState.cs" />
@@ -74,20 +77,20 @@
      <Compile Include="Assets\CodeBase\Services\LogService\ILogService.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\States\LoadPlayerProgressState.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\CoroutineRunner.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\AssetManagement\IAssetProvider.cs" />
      <Compile Include="Assets\CodeBase\UI\HUD\HUDRoot.cs" />
      <Compile Include="Assets\CodeBase\Services\InputService\IInputService.cs" />
-     <Compile Include="Assets\CodeBase\Infrastructure\SceneLoader.cs" />
      <Compile Include="Assets\CodeBase\Services\SaveLoadService\ISaveLoadService.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\PopUps\IPopUpService.cs" />
      <Compile Include="Assets\CodeBase\Services\AdsService\AdsService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameStateMachineInstaller.cs" />
      <Compile Include="Assets\CodeBase\UI\Extensions\ButtonAwaiter.cs" />
      <Compile Include="Assets\CodeBase\UI\Overlays\IAwaitingOverlay.cs" />
+     <Compile Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopupTypes.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactory.cs" />
      <Compile Include="Assets\CodeBase\GameMode1\States\StartGameMode1State.cs" />
      <Compile Include="Assets\CodeBase\GameMode1\States\FinishGameMode1State.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\LoadingCurtain.cs" />
-     <Compile Include="Assets\CodeBase\Infrastructure\ISceneLoader.cs" />
      <Compile Include="Assets\CodeBase\Services\StaticDataService\IStaticDataService.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\GameLoadingSceneBootstraper.cs" />
      <Compile Include="Assets\CodeBase\UI\Extensions\ButtonExtensions.cs" />
@@ -107,6 +110,7 @@
      <Compile Include="Assets\CodeBase\GameMode1\GameMode1SceneInstaller.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameBootstrapState.cs" />
      <Compile Include="Assets\CodeBase\Services\SaveLoadService\SaveLoadService.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\SceneManagement\ISceneProvider.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\ICoroutineRunner.cs" />
      <Compile Include="Assets\CodeBase\Services\InputService\InputService.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\PopUpBase.cs" />
@@ -123,6 +127,8 @@
      <Compile Include="Assets\CodeBase\Services\RandomizerService\RandomExtentions.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Observables\IPublisher.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameHubState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\AssetManagement\AssetLabels.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\SceneManagement\SceneProvider.cs" />
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IProgressSaver.cs" />
      <Compile Include="Assets\CodeBase\Data\DataExtensions.cs" />
      <Compile Include="Assets\CodeBase\GameMode1\States\FailGameMode1State.cs" />
@@ -151,9 +157,12 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\CodeBase\UI\PopUps\ErrorPopup" />
      <Folder Include="Assets\CodeBase\GameLoading\States" />
+     <Folder Include="Assets\CodeBase\Infrastructure\AssetManagement" />
      <Folder Include="Assets\CodeBase\CompositionRoot" />
      <Folder Include="Assets\CodeBase\Services\StaticDataService" />
+     <Folder Include="Assets\AddressableAssetsData\Windows" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
+     <Folder Include="Assets\Resources_moved\Configs" />
      <Folder Include="Assets\CodeBase\Infrastructure\Observables" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\CodeBase" />
@@ -163,8 +172,11 @@
      <Folder Include="Assets\CodeBase\Services\LogService" />
      <Folder Include="Assets\CodeBase\Services\LocalizationService" />
      <Folder Include="Assets\CodeBase\Services\AdsService" />
+     <Folder Include="Assets\Resources_moved\Configs\Services" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <Folder Include="Assets\Resources_moved\Configs\UI\PolicyPopups" />
      <Folder Include="Assets\TextMesh Pro" />
+     <Folder Include="Assets\Resources_moved\Configs\UI" />
      <Folder Include="Assets\CodeBase\UI\Windows" />
      <Folder Include="Assets\CodeBase\Data" />
      <Folder Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup" />
@@ -179,6 +191,7 @@
      <Folder Include="Assets\AddressableAssetsData\AssetGroupTemplates" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <Folder Include="Assets\Resources_moved\Prefabs\UI\Popups" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\CodeBase\GameMode1" />
@@ -197,6 +210,7 @@
      <Folder Include="Assets\Resources\Configs" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\CodeBase\Services" />
+     <Folder Include="Assets\Resources_moved\Prefabs" />
      <Folder Include="Assets\CodeBase\Services\RandomizerService" />
      <Folder Include="Assets\Resources\Infrastructure" />
      <Folder Include="Assets\CodeBase\Infrastructure" />
@@ -207,6 +221,7 @@
      <Folder Include="Assets\CodeBase\UI\Extensions" />
      <Folder Include="Assets\CodeBase\Services\PlayerProgressService" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <Folder Include="Assets\Resources_moved" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\AddressableAssetsData\DataBuilders" />
      <Folder Include="Assets\Resources\Prefabs\UI\Overlays" />
@@ -218,9 +233,11 @@
      <Folder Include="Assets\AddressableAssetsData" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroups" />
      <Folder Include="Assets\CodeBase\UI\Services\PopUps" />
+     <Folder Include="Assets\CodeBase\Infrastructure\SceneManagement" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Assets\CodeBase\UI\Overlays" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\Resources_moved\Prefabs\UI" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -929,11 +946,11 @@
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
