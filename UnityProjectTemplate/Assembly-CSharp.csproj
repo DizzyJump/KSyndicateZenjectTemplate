@@ -915,6 +915,24 @@
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Addressables">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
