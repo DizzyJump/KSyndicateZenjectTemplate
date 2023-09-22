@@ -4,6 +4,7 @@ using CodeBase.Services.AdsService;
 using CodeBase.Services.AnalyticsService;
 using CodeBase.Services.LogService;
 using CodeBase.Services.StaticDataService;
+using CodeBase.UI.Overlays;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
@@ -17,6 +18,8 @@ namespace CodeBase.Infrastructure.States
         private readonly IStaticDataService staticDataService;
         private readonly IAnalyticsService analyticsService;
         private readonly ILogService log;
+        private readonly LoadingCurtainProxy loadingCurtainProxy;
+        private readonly AwaitingOverlayProxy awaitingOverlayProxy;
         private readonly IAssetProvider assetProvider;
 
         public GameBootstrapState(GameStateMachine gameStateMachine,
@@ -24,7 +27,9 @@ namespace CodeBase.Infrastructure.States
             IStaticDataService staticDataService,
             IAnalyticsService analyticsService,
             IAssetProvider assetProvider,
-            ILogService log)
+            ILogService log,
+            LoadingCurtainProxy loadingCurtainProxy,
+            AwaitingOverlayProxy awaitingOverlayProxy)
         {
             this.adsService = adsService;
             this.staticDataService = staticDataService;
@@ -33,6 +38,8 @@ namespace CodeBase.Infrastructure.States
             this.analyticsService = analyticsService;
             this.assetProvider = assetProvider;
             this.log = log;
+            this.loadingCurtainProxy = loadingCurtainProxy;
+            this.awaitingOverlayProxy = awaitingOverlayProxy;
         }
 
         public async void Enter()
@@ -46,9 +53,11 @@ namespace CodeBase.Infrastructure.States
 
         private async UniTask InitServices()
         {
-            // init mandatory global services here
-            await assetProvider.Initialize();
-            await staticDataService.Initialize();
+            // init global services that may need initialization in some order here
+            await assetProvider.InitializeAsync();
+            await staticDataService.InitializeAsync();
+            await loadingCurtainProxy.InitializeAsync();
+            await awaitingOverlayProxy.InitializeAsync();
             analyticsService.Initialize();
             adsService.Initialize();
         }

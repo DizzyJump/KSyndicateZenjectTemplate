@@ -6,7 +6,7 @@ namespace CodeBase.Services.StaticDataService
 {
     public interface IStaticDataService
     {
-        UniTask Initialize();
+        UniTask InitializeAsync();
         ServerConnectionConfig ServerConnectionConfig { get; }
         PolicyAcceptPopupConfig GetPolicyAcceptPopupConfig(PolicyAcceptPopupTypes type);
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using CodeBase.Services.LocalizationService;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -27,5 +28,9 @@ namespace CodeBase.UI.Overlays
         }
 
         public void Hide() => canvas.enabled = false;
+
+        public class Factory : PlaceholderFactory<string, UniTask<AwaitingOverlay>>
+        {
+        }
     }
 }

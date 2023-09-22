@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
@@ -32,7 +33,7 @@ namespace CodeBase.Infrastructure
             gameObject.SetActive(false);
         }
 
-        public class Factory : PlaceholderFactory<LoadingCurtain>
+        public class Factory : PlaceholderFactory<string, UniTask<LoadingCurtain>>
         {
         }
     }

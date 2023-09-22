@@ -1,8 +1,10 @@
 ﻿using CodeBase.Services.LocalizationService;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Zenject;
 
 namespace CodeBase.UI.PopUps.ErrorPopup
 {
@@ -40,6 +42,10 @@ namespace CodeBase.UI.PopUps.ErrorPopup
         {
             base.Cleanup();
             button.onClick.RemoveListener(OnClick);
+        }
+
+        public class Factory : PlaceholderFactory<string, UniTask<ErrorPopup>>
+        {
         }
     }
 }

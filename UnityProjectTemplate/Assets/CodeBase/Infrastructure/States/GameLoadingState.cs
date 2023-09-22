@@ -6,13 +6,13 @@ namespace CodeBase.Infrastructure.States
     public class GameLoadingState : IState
     {
         private readonly ILoadingCurtain loadingCurtain;
-        private readonly ISceneProvider sceneProvider;
+        private readonly ISceneLoader sceneLoader;
         private readonly IAssetProvider assetProvider;
 
-        public GameLoadingState(ILoadingCurtain loadingCurtain, ISceneProvider sceneProvider, IAssetProvider assetProvider)
+        public GameLoadingState(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader, IAssetProvider assetProvider)
         {
             this.loadingCurtain = loadingCurtain;
-            this.sceneProvider = sceneProvider;
+            this.sceneLoader = sceneLoader;
             this.assetProvider = assetProvider;
         }
 
@@ -21,7 +21,7 @@ namespace CodeBase.Infrastructure.States
             loadingCurtain.Show();
             
             await assetProvider.WarmupAssetsByLabel(AssetLabels.GameLoadingState);
-            await sceneProvider.Load(InfrastructureAssetPath.GameLoadingScene);
+            await sceneLoader.Load(InfrastructureAssetPath.GameLoadingScene);
             
             loadingCurtain.Hide();
         }
@@ -30,7 +30,6 @@ namespace CodeBase.Infrastructure.States
         {
             loadingCurtain.Show();
             
-            await sceneProvider.Unload(InfrastructureAssetPath.GameLoadingScene);
             await assetProvider.ReleaseAssetsByLabel(AssetLabels.GameLoadingState);
         }
     }

@@ -15,6 +15,7 @@ using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Overlays;
 using CodeBase.UI.PopUps.ErrorPopup;
 using CodeBase.UI.Services.Factories;
+using Cysharp.Threading.Tasks;
 using Zenject;
 
 namespace CodeBase.CompositionRoot
@@ -29,7 +30,7 @@ namespace CodeBase.CompositionRoot
 
             BindSceneLoader();
 
-            BindCurtains();
+            BindInfrastructureUI();
 
             BindGameStateMachine();
 
@@ -134,18 +135,30 @@ namespace CodeBase.CompositionRoot
         }
 
         private void BindSceneLoader() => 
-            Container.BindInterfacesAndSelfTo<SceneProvider>().AsSingle();
+            Container.BindInterfacesAndSelfTo<SceneLoader>().AsSingle();
 
-        private void BindCurtains()
+        private void BindInfrastructureUI()
         {
-            Container.Bind<ILoadingCurtain>().To<LoadingCurtain>()
-                .FromComponentInNewPrefabResource(InfrastructureAssetPath.CurtainPath).AsSingle();
-            
-            Container.Bind<IAwaitingOverlay>().To<AwaitingOverlay>()
-                .FromComponentInNewPrefabResource(InfrastructureAssetPath.AwaitingOverlay).AsSingle();
-            
-            Container.Bind<ErrorPopup>()
-                .FromComponentInNewPrefabResource(InfrastructureAssetPath.ErrorPopup).AsSingle();
+            BindLoadingCurtains();
+
+            BindAwaitingOverlay();
+        }
+
+        private void BindAwaitingOverlay()
+        {
+            Container
+                .BindFactory<string, UniTask<AwaitingOverlay>, AwaitingOverlay.Factory>()
+                .FromFactory<PrefabFactoryAsync<AwaitingOverlay>>();
+
+            Container.BindInterfacesAndSelfTo<AwaitingOverlayProxy>().AsSingle();
+        }
+
+        private void BindLoadingCurtains()
+        {
+            Container.BindFactory<string, UniTask<LoadingCurtain>, LoadingCurtain.Factory>()
+                .FromFactory<PrefabFactoryAsync<LoadingCurtain>>();
+
+            Container.BindInterfacesAndSelfTo<LoadingCurtainProxy>().AsSingle();
         }
 
         private void BindGameStateMachine() => 

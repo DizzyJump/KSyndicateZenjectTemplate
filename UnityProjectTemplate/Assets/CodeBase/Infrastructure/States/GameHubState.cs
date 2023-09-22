@@ -7,14 +7,14 @@ namespace CodeBase.Infrastructure.States
     public class GameHubState : IState
     {
         private readonly ILoadingCurtain loadingCurtain;
-        private readonly ISceneProvider sceneProvider;
+        private readonly ISceneLoader sceneLoader;
         private readonly ILogService log;
         private readonly IAssetProvider assetProvider;
 
-        public GameHubState(ILoadingCurtain loadingCurtain, ISceneProvider sceneProvider, ILogService log, IAssetProvider assetProvider)
+        public GameHubState(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader, ILogService log, IAssetProvider assetProvider)
         {
             this.loadingCurtain = loadingCurtain;
-            this.sceneProvider = sceneProvider;
+            this.sceneLoader = sceneLoader;
             this.log = log;
             this.assetProvider = assetProvider;
         }
@@ -26,7 +26,7 @@ namespace CodeBase.Infrastructure.States
 
             await assetProvider.WarmupAssetsByLabel(AssetLabels.GameHubState);
             // due to we don't have any substates for this state jet we just load scene with game hub decorations
-            await sceneProvider.Load(InfrastructureAssetPath.GameHubScene);
+            await sceneLoader.Load(InfrastructureAssetPath.GameHubScene);
             
             loadingCurtain.Hide();
         }
@@ -34,7 +34,6 @@ namespace CodeBase.Infrastructure.States
         public async void Exit()
         {
             loadingCurtain.Show();
-            await sceneProvider.Unload(InfrastructureAssetPath.GameHubScene);
             await assetProvider.ReleaseAssetsByLabel(AssetLabels.GameHubState);
         }
     }

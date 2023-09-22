@@ -12,7 +12,7 @@ namespace CodeBase.Infrastructure.AssetManagement
     {
         private readonly Dictionary<string, AsyncOperationHandle> assetRequests = new ();
 
-        public async UniTask Initialize() => 
+        public async UniTask InitializeAsync() => 
             await Addressables.InitializeAsync().ToUniTask();
 
         public async UniTask<TAsset> Load<TAsset>(string key) where TAsset : class

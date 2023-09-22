@@ -7,7 +7,7 @@ namespace CodeBase.Infrastructure.AssetManagement
 {
     public interface IAssetProvider
     {
-        UniTask Initialize();
+        UniTask InitializeAsync();
         UniTask<TAsset> Load<TAsset>(AssetReference assetReference) where TAsset : class;
         UniTask<TAsset> Load<TAsset>(string key) where TAsset : class;
         UniTask<List<string>> GetAssetsListByLabel<TAsset>(string label);

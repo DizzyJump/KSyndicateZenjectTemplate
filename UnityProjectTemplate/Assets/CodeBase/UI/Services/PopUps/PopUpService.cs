@@ -11,16 +11,15 @@ namespace CodeBase.UI.Services.PopUps
     public class PopUpService : IPopUpService, IDisposable
     {
         private readonly IUIFactory uiFactory;
-        private readonly ErrorPopup errorPopup;
         
         private readonly ErrorPopupConfig errorPopupConfig;
 
         private CancellationTokenSource ctn;
         
-        public PopUpService(IUIFactory uiFactory, ErrorPopup errorPopup)
+        public PopUpService(IUIFactory uiFactory)
         {
             this.uiFactory = uiFactory;
-            this.errorPopup = errorPopup;
+            
             errorPopupConfig = new ErrorPopupConfig();
             ctn = new CancellationTokenSource();
         }
@@ -38,7 +37,8 @@ namespace CodeBase.UI.Services.PopUps
             errorPopupConfig.HeaderText = messageHeader;
             errorPopupConfig.MessageText = messageBody;
             errorPopupConfig.ButtonText = buttonText;
-            
+
+            var errorPopup = await uiFactory.CreateErrorPopup();
             await errorPopup.Show(errorPopupConfig).AttachExternalCancellation(ctn.Token);
             errorPopup.Hide();
         }

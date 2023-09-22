@@ -27,7 +27,7 @@ namespace CodeBase.Services.StaticDataService
             this.assetProvider = assetProvider;
         }
 
-        public async UniTask Initialize()
+        public async UniTask InitializeAsync()
         {
             // load your configs here
             List<UniTask> tasks = new List<UniTask>();

@@ -2,9 +2,8 @@
 
 namespace CodeBase.Infrastructure
 {
-    public interface ISceneProvider
+    public interface ISceneLoader
     {
         UniTask Load(string nextScene);
-        UniTask Unload(string scene);
     }
 }
