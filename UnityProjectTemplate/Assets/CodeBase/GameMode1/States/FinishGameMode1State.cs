@@ -1,4 +1,5 @@
 using CodeBase.Infrastructure.States;
+using Cysharp.Threading.Tasks;
 
 namespace CodeBase.GameMode1.States
 {
@@ -9,15 +10,15 @@ namespace CodeBase.GameMode1.States
         public FinishGameMode1State(GameStateMachine gameStateMachine) => 
             this.gameStateMachine = gameStateMachine;
 
-        public void Exit()
+        public async UniTask Exit()
         {
             // use such states for finishing gameplay and cleanup resources, posting session statistics and leaving Game State
-            gameStateMachine.Enter<GameHubState>();
+            gameStateMachine.Enter<GameHubState>().Forget();
         }
 
-        public void Enter()
+        public UniTask Enter()
         {
-            
+            return default;
         }
     }
 }

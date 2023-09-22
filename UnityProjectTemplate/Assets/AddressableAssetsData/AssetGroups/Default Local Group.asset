@@ -72,7 +72,10 @@ MonoBehaviour:
   - m_GUID: 4803a71d81b8657408b98a3be2fa7b08
     m_Address: ErrorPopup
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - GameLoadingState
+    - GameHubState
+    - GameplayState
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 58f1d24dc6e3bb6498c7dbdc20d2a86e, type: 2}

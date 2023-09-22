@@ -1,5 +1,6 @@
 ﻿using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Services.LogService;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.States
@@ -19,7 +20,7 @@ namespace CodeBase.Infrastructure.States
             this.assetProvider = assetProvider;
         }
 
-        public async void Enter()
+        public async UniTask Enter()
         {
             log.Log("Game mode 1 state enter");
             loadingCurtain.Show();
@@ -28,7 +29,7 @@ namespace CodeBase.Infrastructure.States
             loadingCurtain.Hide();
         }
 
-        public async void Exit()
+        public async UniTask Exit()
         {
             loadingCurtain.Show();
             await assetProvider.ReleaseAssetsByLabel(AssetLabels.GameplayState);

@@ -29,7 +29,7 @@ namespace CodeBase.GameLoading.States
             this.log = log;
         }
 
-        public async void Enter()
+        public async UniTask Enter()
         {
             log.Log("LoadPlayerProgressState enter");
             
@@ -42,7 +42,7 @@ namespace CodeBase.GameLoading.States
             await UniTask.WaitForSeconds(1f); // just for demonstrate concept with overlay. You can remove it. 
             awaitingOverlay.Hide();
             
-            sceneStateMachine.Enter<PrivatePolicyState>();
+            sceneStateMachine.Enter<PrivatePolicyState>().Forget();
         }
 
         private void NotifyProgressReaderServices(PlayerProgress progress)
@@ -51,10 +51,10 @@ namespace CodeBase.GameLoading.States
                 reader.LoadProgress(progress);
         }
 
-        public void Exit()
+        public UniTask Exit()
         {
             log.Log("LoadPlayerProgressState exit");
-            
+            return default;
         }
 
         private PlayerProgress LoadProgressOrInitNew()

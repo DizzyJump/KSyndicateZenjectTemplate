@@ -5,6 +5,7 @@ using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.StaticDataService;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.PopUps;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace CodeBase.GameLoading.States
@@ -26,7 +27,7 @@ namespace CodeBase.GameLoading.States
             this.staticDataService = staticDataService;
         }
 
-        public async void Enter()
+        public async UniTask Enter()
         {
             log.Log("GDPRState enter");
 
@@ -34,7 +35,7 @@ namespace CodeBase.GameLoading.States
                 await AskToAcceptGDPRPolicy();
             
             if (progressService.Progress.GDPRPolicyAccepted)
-                sceneStateMachine.Enter<FinishGameLoadingState>();
+                sceneStateMachine.Enter<FinishGameLoadingState>().Forget();
             else
                 log.Log("Player cant play our game due to reject gdpr policy :)");
         }
@@ -48,9 +49,6 @@ namespace CodeBase.GameLoading.States
             progressService.Progress.GDPRPolicyAccepted = result;
         }
 
-        public void Exit()
-        {
-            
-        }
+        public UniTask Exit() => default;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using CodeBase.Infrastructure.AssetManagement;
+using Cysharp.Threading.Tasks;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -16,7 +17,7 @@ namespace CodeBase.Infrastructure.States
             this.assetProvider = assetProvider;
         }
 
-        public async void Enter()
+        public async UniTask Enter()
         {
             loadingCurtain.Show();
             
@@ -26,7 +27,7 @@ namespace CodeBase.Infrastructure.States
             loadingCurtain.Hide();
         }
 
-        public async void Exit()
+        public async UniTask Exit()
         {
             loadingCurtain.Show();
             

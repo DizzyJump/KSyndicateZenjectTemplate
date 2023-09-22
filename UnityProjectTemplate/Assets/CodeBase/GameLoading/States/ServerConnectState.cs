@@ -4,6 +4,7 @@ using CodeBase.Services.ServerConnectionService;
 using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Overlays;
 using CodeBase.UI.Services.PopUps;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace CodeBase.GameLoading.States
@@ -27,7 +28,7 @@ namespace CodeBase.GameLoading.States
             this.log = log;
         }
 
-        public async void Enter()
+        public async UniTask Enter()
         {
             log.Log("ServerConnectState enter");
             awaitingOverlay.Show("Connection to server...");
@@ -37,7 +38,7 @@ namespace CodeBase.GameLoading.States
             awaitingOverlay.Hide();
             
             if(result == ConnectionResult.Success)
-                sceneStateMachine.Enter<LoadPlayerProgressState>();
+                sceneStateMachine.Enter<LoadPlayerProgressState>().Forget();
             else
             {
                 // some works on connection error for example repeat
@@ -46,9 +47,6 @@ namespace CodeBase.GameLoading.States
             }
         }
 
-        public void Exit()
-        {
-            
-        }
+        public UniTask Exit() => default;
     }
 }

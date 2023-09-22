@@ -1,5 +1,6 @@
 ﻿using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace CodeBase.GameLoading.States
@@ -15,16 +16,14 @@ namespace CodeBase.GameLoading.States
             this.log = log;
         }
 
-        public void Enter()
+        public async UniTask Enter()
         {
             log.Log("FinishGameLoadingState enter");
             
-            gameStateMachine.Enter<GameHubState>();
+            gameStateMachine.Enter<GameHubState>().Forget();
         }
 
-        public void Exit()
-        {
-            
-        }
+        public UniTask Exit() => 
+            default;
     }
 }

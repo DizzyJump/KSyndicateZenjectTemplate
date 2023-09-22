@@ -1,7 +1,9 @@
+using Cysharp.Threading.Tasks;
+
 namespace CodeBase.Infrastructure.States
 {
     public interface IExitableState
     {
-        void Exit();
+        UniTask Exit();
     }
 }

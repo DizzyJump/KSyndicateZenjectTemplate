@@ -5,6 +5,7 @@ using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.StaticDataService;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.PopUps;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace CodeBase.GameLoading.States
@@ -26,7 +27,7 @@ namespace CodeBase.GameLoading.States
             this.staticData = staticData;
         }
 
-        public async void Enter()
+        public async UniTask Enter()
         {
             log.Log("PrivatePolicyState enter");
             
@@ -34,7 +35,7 @@ namespace CodeBase.GameLoading.States
                 await AskToAcceptPrivatePolicy();
             
             if (progressService.Progress.PrivatePolicyAccepted)
-                sceneStateMachine.Enter<GDPRState>();
+                sceneStateMachine.Enter<GDPRState>().Forget();
             else
                 log.Log("Player cant play our game due to somehow reject private policy :)");
         }
@@ -48,9 +49,6 @@ namespace CodeBase.GameLoading.States
             progressService.Progress.PrivatePolicyAccepted = result;
         }
 
-        public void Exit()
-        {
-            
-        }
+        public UniTask Exit() => default;
     }
 }

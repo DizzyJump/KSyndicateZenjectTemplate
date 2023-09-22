@@ -1,7 +1,9 @@
+using Cysharp.Threading.Tasks;
+
 namespace CodeBase.Infrastructure.States
 {
     public interface IPaylodedState<TPayload> : IExitableState
     {
-        void Enter(TPayload payload);
+        UniTask Enter(TPayload payload);
     }
 }

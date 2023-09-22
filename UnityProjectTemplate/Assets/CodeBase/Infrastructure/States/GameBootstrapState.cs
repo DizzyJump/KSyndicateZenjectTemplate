@@ -42,13 +42,13 @@ namespace CodeBase.Infrastructure.States
             this.awaitingOverlayProxy = awaitingOverlayProxy;
         }
 
-        public async void Enter()
+        public async UniTask Enter()
         {
             log.Log("BootstrapState Enter");
             
             await InitServices();
             
-            gameStateMachine.Enter<GameLoadingState>();
+            gameStateMachine.Enter<GameLoadingState>().Forget();
         }
 
         private async UniTask InitServices()
@@ -62,8 +62,7 @@ namespace CodeBase.Infrastructure.States
             adsService.Initialize();
         }
 
-        public void Exit()
-        {
-        }
+        public UniTask Exit() => 
+            default;
     }
 }
