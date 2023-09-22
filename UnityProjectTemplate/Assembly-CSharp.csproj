@@ -241,7 +241,6 @@
      <Folder Include="Assets\CodeBase\UI\Services\PopUps" />
      <Folder Include="Assets\CodeBase\Infrastructure\SceneManagement" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
-     <Folder Include="Assets\CodeBase\UI\Overlays" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\Resources_moved\Prefabs\UI" />
      <Reference Include="UnityEngine">

@@ -6,22 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ea8791ba-f3e2-4bbc-9045-b1f96d0a71a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/FinishGameLoadingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/FinishGameLoadingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/GDPRState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/PrivatePolicyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/ServerConnectState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FailGameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FailGameMode1State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameMode1/States/FinishGameMode1State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameBootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameBootstrapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameHubState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameHubState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoadingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoadingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IExitableState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IExitableState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IPaylodedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IPaylodedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/UI/LoadingCurtain/LoadingCurtain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/UI/LoadingCurtain/LoadingCurtain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Overlays.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +97,7 @@
       <workItem from="1695298372158" duration="7853000" />
       <workItem from="1695309199910" duration="8858000" />
       <workItem from="1695324229653" duration="3725000" />
-      <workItem from="1695365377059" duration="7600000" />
+      <workItem from="1695365377059" duration="8301000" />
     </task>
     <servers />
   </component>
