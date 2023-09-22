@@ -6,7 +6,8 @@ Dependencies:
   1. Extenject (Zenject)
   2. TextMesh Pro
   3. UniTask
-  4. Odin inspector
+  4. Addressables
+  5. Odin inspector
 
 ## Flow scheme
 ![Scheme of flow.](/images/flow.png)
