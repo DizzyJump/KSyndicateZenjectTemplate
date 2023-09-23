@@ -1,7 +1,5 @@
-﻿using System;
-using CodeBase.Infrastructure.States;
+﻿using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -10,7 +8,15 @@ namespace CodeBase.UI.Elements
 {
     public class GameStateSwitchButton : MonoBehaviour
     {
-        [SerializeField][ValueDropdown("statesValues")] private int targetMode;
+        public enum TargetStates
+        {
+            None = 0,
+            Loading = 1,
+            GameHub = 2,
+            Gameplay = 3 ,
+        }
+        
+        [SerializeField] private TargetStates targetState = 0;
         [SerializeField] private Button button;
 
         private GameStateMachine gameStateMachine;
@@ -31,21 +37,13 @@ namespace CodeBase.UI.Elements
 
         private void OnClick()
         {
-            switch (targetMode)
+            switch (targetState)
             {
-                case 0: gameStateMachine.Enter<GameLoadingState>(); break;
-                case 1: gameStateMachine.Enter<GameHubState>(); break;
-                case 2: gameStateMachine.Enter<GameMode1State>(); break;
+                case TargetStates.Loading: gameStateMachine.Enter<GameLoadingState>(); break;
+                case TargetStates.GameHub: gameStateMachine.Enter<GameHubState>(); break;
+                case TargetStates.Gameplay: gameStateMachine.Enter<GameMode1State>(); break;
                 default: log.LogError("Not valid option"); break;
             }
         }
-
-        // The selectable values for the dropdown, with custom names.
-        private ValueDropdownList<int> statesValues = new ValueDropdownList<int>()
-        {
-            {"Loading",	0	},
-            {"GameHub",	1	},
-            {"GameMode1",2	},
-        };
     }
 }
