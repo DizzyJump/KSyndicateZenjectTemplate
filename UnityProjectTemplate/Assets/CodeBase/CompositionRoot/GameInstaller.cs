@@ -1,7 +1,9 @@
 using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factories;
+using CodeBase.Infrastructure.SceneManagement;
 using CodeBase.Infrastructure.States;
+using CodeBase.Infrastructure.UI.LoadingCurtain;
 using CodeBase.Services.AdsService;
 using CodeBase.Services.AnalyticsService;
 using CodeBase.Services.InputService;
@@ -13,7 +15,6 @@ using CodeBase.Services.SaveLoadService;
 using CodeBase.Services.ServerConnectionService;
 using CodeBase.Services.StaticDataService;
 using CodeBase.UI.Overlays;
-using CodeBase.UI.PopUps.ErrorPopup;
 using CodeBase.UI.Services.Factories;
 using Cysharp.Threading.Tasks;
 using Zenject;

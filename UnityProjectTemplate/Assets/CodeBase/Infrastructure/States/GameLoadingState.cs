@@ -1,5 +1,7 @@
 ﻿using System.Threading.Tasks;
 using CodeBase.Infrastructure.AssetManagement;
+using CodeBase.Infrastructure.SceneManagement;
+using CodeBase.Infrastructure.UI.LoadingCurtain;
 using Cysharp.Threading.Tasks;
 
 namespace CodeBase.Infrastructure.States

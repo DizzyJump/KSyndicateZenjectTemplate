@@ -1,8 +1,8 @@
 ﻿using CodeBase.Infrastructure.States;
-using CodeBase.Infrastructure.UI.AwaitingOverlay;
 using CodeBase.Services.LogService;
 using CodeBase.Services.ServerConnectionService;
 using CodeBase.Services.StaticDataService;
+using CodeBase.UI.Overlays;
 using CodeBase.UI.Services.PopUps;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
