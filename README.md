@@ -1,6 +1,6 @@
 # KSyndicateZenjectTemplate
 
-Main idea of template is K-Syndicate-like architecture + Zenject
+Main idea of this project template is K-Syndicate-like architecture + Zenject + Addressables
 
 Dependencies: 
   1. Extenject (Zenject)
