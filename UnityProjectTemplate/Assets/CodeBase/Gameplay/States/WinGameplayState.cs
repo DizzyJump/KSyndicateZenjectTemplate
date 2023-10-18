@@ -1,9 +1,9 @@
 using CodeBase.Infrastructure.States;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.GameMode1.States
+namespace CodeBase.Gameplay.States
 {
-    public class WinGameMode1State : IState
+    public class WinGameplayState : IState
     {
         public UniTask Exit()
         {

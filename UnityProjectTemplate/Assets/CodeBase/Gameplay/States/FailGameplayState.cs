@@ -1,9 +1,9 @@
 using CodeBase.Infrastructure.States;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.GameMode1.States
+namespace CodeBase.Gameplay.States
 {
-    public class FailGameMode1State : IState
+    public class FailGameplayState : IState
     {
         public UniTask Enter()
         {

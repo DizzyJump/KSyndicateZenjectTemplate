@@ -3,9 +3,9 @@ using CodeBase.UI;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.GameMode1
+namespace CodeBase.Gameplay
 {
-    public class GameMode1SceneInstaller : MonoInstaller
+    public class GameplaySceneInstaller : MonoInstaller
     {
         // Here we bind dependencies that make sense only in gameplay scene.
         // If we need some dependencies from scene for our game mode
@@ -15,7 +15,7 @@ namespace CodeBase.GameMode1
         {
             Debug.Log("Start game scene installer");
             
-            Container.BindInterfacesAndSelfTo<GameMode1SceneBootstraper>().AsSingle().NonLazy(); // non lazy due to it's not injected anywhere but we still need to instanciate it
+            Container.BindInterfacesAndSelfTo<GameplaySceneBootstraper>().AsSingle().NonLazy(); // non lazy due to it's not injected anywhere but we still need to instanciate it
 
             Container.BindInterfacesAndSelfTo<StatesFactory>().AsSingle();
 
