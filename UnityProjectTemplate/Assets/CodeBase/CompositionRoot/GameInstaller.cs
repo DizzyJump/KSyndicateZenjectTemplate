@@ -14,6 +14,7 @@ using CodeBase.Services.RandomizerService;
 using CodeBase.Services.SaveLoadService;
 using CodeBase.Services.ServerConnectionService;
 using CodeBase.Services.StaticDataService;
+using CodeBase.Services.WalletService;
 using CodeBase.UI.Overlays;
 using CodeBase.UI.Services.Factories;
 using Cysharp.Threading.Tasks;
@@ -58,7 +59,12 @@ namespace CodeBase.CompositionRoot
             BindLogService();
 
             BindAssetProvider();
+
+            BindWalletService();
         }
+
+        private void BindWalletService() => 
+            Container.BindInterfacesAndSelfTo<WalletService>().AsSingle();
 
         private void BindAssetProvider() => 
             Container.BindInterfacesTo<AssetProvider>().AsSingle();

@@ -7,14 +7,14 @@ using UnityEngine;
 
 namespace CodeBase.Infrastructure.States
 {
-    public class GameMode1State : IState
+    public class GameplayState : IState
     {
         private readonly ILoadingCurtain loadingCurtain;
         private readonly ISceneLoader sceneLoader;
         private readonly ILogService log;
         private readonly IAssetProvider assetProvider;
 
-        public GameMode1State(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader, ILogService log, IAssetProvider assetProvider)
+        public GameplayState(ILoadingCurtain loadingCurtain, ISceneLoader sceneLoader, ILogService log, IAssetProvider assetProvider)
         {
             this.loadingCurtain = loadingCurtain;
             this.sceneLoader = sceneLoader;

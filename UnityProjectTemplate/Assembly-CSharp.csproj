@@ -46,12 +46,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameLoadingState.cs" />
+     <Compile Include="Assets\CodeBase\Infrastructure\States\GameplayState.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\GameFactoryInstaller.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\ErrorPopup\ErrorPopup.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\StateMachine.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\PopUps\PopUpService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\UI\AwaitingOverlay\AwaitingOverlayProxy.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Observables\Publisher.cs" />
+     <Compile Include="Assets\CodeBase\Services\WalletService\WalletService.cs" />
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\PersistentProgressService.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Window\WindowId.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Factories\IUIFactory.cs" />
@@ -67,6 +69,7 @@
      <Compile Include="Assets\CodeBase\Infrastructure\UI\AwaitingOverlay\IAwaitingOverlay.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\AssetManagement\PrefabFactoryAsync.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IState.cs" />
+     <Compile Include="Assets\CodeBase\Services\WalletService\CurrencyConfig.cs" />
      <Compile Include="Assets\CodeBase\Services\LogService\LogService.cs" />
      <Compile Include="Assets\CodeBase\Services\StaticDataService\StaticDataService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IPaylodedState.cs" />
@@ -97,13 +100,14 @@
      <Compile Include="Assets\CodeBase\Services\StaticDataService\IStaticDataService.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\GameLoadingSceneBootstraper.cs" />
      <Compile Include="Assets\CodeBase\Gameplay\States\WinGameplayState.cs" />
+     <Compile Include="Assets\CodeBase\Services\PrefabPoolingService\SpecificPrefabPool.cs" />
      <Compile Include="Assets\CodeBase\UI\Extensions\ButtonExtensions.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameRunner.cs" />
      <Compile Include="Assets\CodeBase\Services\AnalyticsService\IAnalyticsService.cs" />
      <Compile Include="Assets\CodeBase\Services\AdsService\IAdsService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Observables\Observable.cs" />
      <Compile Include="Assets\CodeBase\Services\RandomizerService\IRandomizerService.cs" />
-     <Compile Include="Assets\CodeBase\Infrastructure\States\GameMode1State.cs" />
+     <Compile Include="Assets\CodeBase\Services\PrefabPoolingService\PrefabPoolingService.cs" />
      <Compile Include="Assets\CodeBase\UI\Services\Factories\UIFactoryInstaller.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\GameFactory.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopup.cs" />
@@ -113,19 +117,24 @@
      <Compile Include="Assets\CodeBase\UI\PopUps\PolicyAcceptPopup\PolicyAcceptPopupConfig.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IExitableState.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\GameBootstrapState.cs" />
+     <Compile Include="Assets\CodeBase\Services\WalletService\IWalletService.cs" />
+     <Compile Include="Assets\CodeBase\Services\WalletService\CurrencyType.cs" />
      <Compile Include="Assets\CodeBase\Services\SaveLoadService\SaveLoadService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\ICoroutineRunner.cs" />
      <Compile Include="Assets\CodeBase\Services\InputService\InputService.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\PopUpBase.cs" />
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IProgressReader.cs" />
      <Compile Include="Assets\CodeBase\Services\RandomizerService\RandomizerService.cs" />
+     <Compile Include="Assets\CodeBase\Services\PrefabPoolingService\PrefabPoolServiceInstaller.cs" />
      <Compile Include="Assets\CodeBase\Services\ServerConnectionService\ServerConnectionConfig.cs" />
      <Compile Include="Assets\CodeBase\Services\AnalyticsService\AnalyticsService.cs" />
      <Compile Include="Assets\CodeBase\UI\PopUps\ErrorPopup\ErrorPopupConfig.cs" />
+     <Compile Include="Assets\CodeBase\Data\DictionaryContainer.cs" />
      <Compile Include="Assets\CodeBase\Services\LocalizationService\ILocalizationService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\GameBootstrapper.cs" />
      <Compile Include="Assets\CodeBase\Gameplay\States\PlayGameplayState.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\SceneStateMachine.cs" />
+     <Compile Include="Assets\CodeBase\Services\WalletService\WalletsData.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\InfrastructureAssetPath.cs" />
      <Compile Include="Assets\CodeBase\Services\RandomizerService\RandomExtentions.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Observables\IPublisher.cs" />
@@ -134,6 +143,7 @@
      <Compile Include="Assets\CodeBase\Services\PlayerProgressService\IProgressSaver.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\SceneManagement\SceneLoader.cs" />
      <Compile Include="Assets\CodeBase\Data\DataExtensions.cs" />
+     <Compile Include="Assets\CodeBase\Services\PrefabPoolingService\IPrefabPoolingService.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\States\IStateMachine.cs" />
      <Compile Include="Assets\CodeBase\Infrastructure\Factories\IGameFactory.cs" />
      <Compile Include="Assets\CodeBase\GameLoading\States\PrivatePolicyState.cs" />
@@ -160,6 +170,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\CodeBase\UI\PopUps\ErrorPopup" />
      <Folder Include="Assets\CodeBase\GameLoading\States" />
+     <Folder Include="Assets\CodeBase\Services\WalletService" />
      <Folder Include="Assets\CodeBase\Infrastructure\AssetManagement" />
      <Folder Include="Assets\CodeBase\CompositionRoot" />
      <Folder Include="Assets\CodeBase\Services\StaticDataService" />
@@ -218,6 +229,7 @@
      <Folder Include="Assets\Resources_moved\Prefabs" />
      <Folder Include="Assets\CodeBase\Services\RandomizerService" />
      <Folder Include="Assets\Resources\Infrastructure" />
+     <Folder Include="Assets\CodeBase\Services\PrefabPoolingService" />
      <Folder Include="Assets\CodeBase\Infrastructure" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\CodeBase\UI" />

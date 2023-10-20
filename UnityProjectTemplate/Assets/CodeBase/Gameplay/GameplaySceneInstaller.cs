@@ -1,4 +1,5 @@
 using CodeBase.Infrastructure.States;
+using CodeBase.Services.PrefabPoolingService;
 using CodeBase.UI;
 using UnityEngine;
 using Zenject;
@@ -22,6 +23,8 @@ namespace CodeBase.Gameplay
             Container.Bind<SceneStateMachine>().AsSingle();
             
             UIInstaller.Install(Container);
+
+            Container.BindInterfacesAndSelfTo<PrefabPoolingService>().AsSingle();
         }
     }
 }

@@ -4,6 +4,7 @@ using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
 using CodeBase.Services.PlayerProgressService;
 using CodeBase.Services.SaveLoadService;
+using CodeBase.Services.WalletService;
 using CodeBase.UI.Overlays;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -73,6 +74,8 @@ namespace CodeBase.GameLoading.States
             // init start state of progress here
 
             progress.PrivatePolicyAccepted = false;
+            progress.GDPRPolicyAccepted = false;
+            progress.WalletsData = new WalletsData(new Dictionary<int, long>());
             
             return progress;
         }

@@ -41,7 +41,7 @@ namespace CodeBase.UI.Elements
             {
                 case TargetStates.Loading: gameStateMachine.Enter<GameLoadingState>(); break;
                 case TargetStates.GameHub: gameStateMachine.Enter<GameHubState>(); break;
-                case TargetStates.Gameplay: gameStateMachine.Enter<GameMode1State>(); break;
+                case TargetStates.Gameplay: gameStateMachine.Enter<GameplayState>(); break;
                 default: log.LogError("Not valid option"); break;
             }
         }
